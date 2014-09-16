@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Monitoraggio Provvedimenti - Mockup ricerca provvedimento (inseritore/capofila)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+	<!--link rel="stylesheet/less" href="less/bootstrap.less" type="text/css" /-->
+	<!--link rel="stylesheet/less" href="less/responsive.less" type="text/css" /-->
+	<!--script src="js/less-1.3.3.min.js"></script-->
+	<!--append ‘#!watch’ to the browser URL, then refresh the page. -->
+	
+	
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link href="css/style.css" rel="stylesheet">
+	
+	
+
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+  <![endif]-->
+
+  <!-- Fav and touch icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/apple-touch-icon-144-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/apple-touch-icon-114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="7large72" href="img/apple-touch-icon-72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" href="img/apple-touch-icon-57-precomposed.png">
+  <link rel="shortcut icon" href="img/favicon.png">
+  
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/scripts.js"></script>
+	
+</head>
+
+<body>
+	<div class="container ricerca">
+		<div class="row">
+			<div class="span12">
+				<h3 class="text-left underline"><span>Ricerca provvedimento</span></h3>
+			</div>
+		</div>
+		<div class="row">
+			<div class="span10 offset2">
+				<form class="form-horizontal">
+					<div class="control-group">
+						<label class="control-label" for="inputEmail">Fonte
+							normativa</label>
+						<div class="controls">
+							<input type="text" id="inputEmail" class="input-xlarge">
+						</div>
+					</div>
+					<div class="control-group">
+						<label class="control-label" for="art">Art.</label>
+						<div class="controls">
+							<input type="text" id="art" class="input-xlarge">
+						</div>
+					</div>
+					<div class="control-group">
+						<label class="control-label" for="comma">Comma</label>
+						<div class="controls">
+							<input type="text" id="comma" class="input-xlarge">
+						</div>
+					</div>
+					<div class="control-group">
+						<label class="control-label" for="provvDaAdottare">Provvedimento
+							da adottare</label>
+						<div class="controls">
+							<select id="provvDaAdottare" class="span3">
+								<option>Sceglierne uno...</option>
+								<option>Test 1</option>
+								<option>Test 2</option>
+							</select>
+						</div>
+					</div>
+					<div class="control-group">
+						<label class="control-label" for="titoloOggetto">Titolo /
+							Oggetto</label>
+						<div class="controls">
+							<input type="text" id="titoloOggetto" class="input-xlarge" cols="30" rows="3"></input>
+						</div>
+					</div>
+					<div class="control-group">
+						<span class="control-label">Stato di attuazione Da</span>
+						<div class="controls form-inline">
+							<label for="inputValue"></label> <input type="text" id="inputKey">&nbsp;<i class="icon-calendar icon-large"></i>
+							<label for="inputValue">&nbsp;&nbsp;A</label> <input type="text"
+								id="inputValue">&nbsp;<i class="icon-calendar icon-large"></i>
+						</div>
+					</div>
+					<div class="control-group">
+						<label class="control-label" for="statoDiAttuazione">Stato
+							di attuazione</label>
+						<div class="controls">
+							<select id="statoDiAttuazione" class="input-xlarge">
+								<option>Sceglierne uno...</option>
+								<option>Inserito</option>
+								<option>Sospeso</option>
+								<option>Fine lavorazione</option>
+								<option>Chiusura lavori</option>
+								<option>Adottato</option>
+								<option>Non attuabile</option>
+								<option>Superato</option>
+							</select>
+						</div>
+					</div>
+					<div class="control-group">
+						<label class="control-label" for="enteCapofila">Ente
+							Capofila (DD)</label>
+						<div class="controls">
+							<select id="enteCapofila" class="input-xlarge">
+								<option>Sceglierne uno...</option>
+								<option>Test 1</option>
+								<option>Test 2</option>
+							</select>
+						</div>
+					</div>
+					<div class="control-group">
+						<label class="control-label" for="proponente">Proponente
+							(DD)</label>
+						<div class="controls">
+							<select id="proponente" class="input-xlarge">
+								<option>Sceglierne uno...</option>
+								<option>Test 1</option>
+								<option>Test 2</option>
+							</select>
+						</div>
+					</div>
+					<div class="control-group">
+						<div class="form-actions">
+							<button type="submit" class="btn btn-primary">Ricerca &nbsp;<i class="icon-search"></i></button>
+							<button type="button" class="btn">Annulla &nbsp;<i class="icon-eraser"></i></button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="row">
+			<div class="span12">
+				<h3 class="text-left underline"><span>Elenco provvedimenti</span></h3>
+			</div>
+		</div>
+		<div class="row">
+		<div class="span12" style="overflow:auto">
+			<table class="table table-hover table-bordered">
+				<thead>
+					<tr>
+						<th>
+							#
+						</th>
+						<th>
+							Tipologia
+						</th>
+						<th>
+							Fonte nominativa
+						</th>
+						<th>
+							Art.
+						</th>
+						<th>
+							Comma
+						</th>
+						<th>
+							Provv. da adottare
+						</th>
+						<th>
+							Titolo / Oggetto
+						</th>
+						<th>
+							Stato di attuazione
+						</th>
+						<th>
+							Ente Capofila
+						</th>
+						<th>
+							Proponente 
+						</th>
+						<th>
+							Ente 
+						</th>
+						<th>
+							Modifica 
+						</th>
+						<th>
+							Elimina 
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<a href="#">1</a>
+						</td>
+						<td>
+							Proponente MEF
+						</td>
+						<td>
+							D.L. 145/2013 conv. Legge 9/2014
+						</td>
+						<td>
+							2
+						</td>
+						<td>
+							1 lett. h)
+						</td>
+						<td>
+							D.I.
+						</td>
+						<td class="titoloOggetto">
+							<a href="#" title="definizione criteri e modalità di concessione aevolazioni in favore della nuova imprenditorialità nei settori dei beni e dell'erogazione dei servizi">definizione criteri e modalità di concessione aevolazioni in favore della nuova...</a>
+						</td>
+						<td>
+							in istruttoria 
+						</td>
+						<td>
+							Agenzia Dogane e Monopoli
+						</td>
+						<td>
+							Agenzia Dogane e Monopoli
+						</td>
+						<td class="nowrap">
+							Agenzia Entrate e Territorio&nbsp;&nbsp; <i class="icon-check "></i>&nbsp;<i class="icon-paper-clip "></i>&nbsp;<i class="icon-file-alt"></i><br>
+							Ag. Dogane e Monopoli<br>
+							Ag. Entrate<br>
+							Ag. Territorio	
+						</td>
+						<td class="center">
+							<i class="icon-pencil icon-large gray"></i>
+						</td>
+						<td class="center">
+							<i class="icon-trash icon-large gray"></i>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#">2</a>
+						</td>
+						<td>
+							Lorem ipsum..
+						</td>
+						<td>
+							Lorem ipsum..
+						</td>
+						<td>
+							Lorem ipsum..
+						</td>
+						<td>
+							Lorem ipsum..
+						</td>
+						<td>
+							Lorem ipsum..
+						</td>
+						<td>
+							<a href="#">Lorem ipsum..</a>
+						</td>
+						<td>
+							Lorem ipsum..
+						</td>
+						<td>
+							Lorem ipsum..
+						</td>
+						<td>
+							Lorem ipsum..
+						</td>
+						<td class="nowrap">
+							Agenzia Entrate e Territorio&nbsp;&nbsp; <i class="icon-check "></i>&nbsp;<i class="icon-paper-clip "></i>&nbsp;<i class="icon-file-alt"></i><br>
+							Ag. Dogane e Monopoli<br>
+							Ag. Entrate&nbsp;&nbsp; <i class="icon-check "></i>&nbsp;<i class="icon-paper-clip "></i><br>
+							Ag. Territorio	
+						</td>
+						<td class="center">
+							<i class="icon-pencil icon-large gray"></i>
+						</td>
+						<td class="center">
+							<i class="icon-trash icon-large gray"></i>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#">3</a>
+						</td>
+						<td>
+							Lorem ipsum..
+						</td>
+						<td>
+							Lorem ipsum..
+						</td>
+						<td>
+							Lorem ipsum..
+						</td>
+						<td>
+							Lorem ipsum..
+						</td>
+						<td>
+							Lorem ipsum..
+						</td>
+						<td>
+							<a href="#">Lorem ipsum..</a>
+						</td>
+						<td>
+							Lorem ipsum..
+						</td>
+						<td>
+							Lorem ipsum..
+						</td>
+						<td>
+							Lorem ipsum..
+						</td>
+						<td class="nowrap">
+							Agenzia Entrate e Territorio<br>
+							Ag. Dogane e Monopoli<br>
+							Ag. Entrate<br>
+							Ag. Territorio&nbsp;&nbsp; <i class="icon-check "></i>&nbsp;<i class="icon-file-alt"></i><br>	
+						</td>
+						<td class="center">
+							<i class="icon-pencil icon-large gray"></i>
+						</td>
+						<td class="center">
+							<i class="icon-trash icon-large gray"></i>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+.container {
+	color: #545454;
+}
+
+.form-horizontal .control-label {
+	float: left;
+	width: 200px;
+	padding-top: 5px;
+	padding-right: 10px;
+	text-align: right;
+}
+
+.form-actions{
+	background-color:inherit;
+}
+
+.ricerca .form-horizontal .form-actions {
+	padding-left: 280px;
+}
+.gray {
+	color: gray;
+}
+
+th {
+	white-space: nowrap;
+}
+
+.nowrap {
+	white-space: nowrap;
+}
+
+.center {
+	text-align: center !important; 
+}
+
+.table a {
+	text-decoration: underline;
+}
+.table .titoloOggetto {
+	min-width: 200px;
+}
+
+.test {
+	  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+.underline {
+border-bottom: 1px solid;
+}
+
+.underline > span {
+border-bottom: 1px solid;
+display: inline-block;
+}
