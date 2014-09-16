@@ -1,37 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Monitoraggio Provvedimenti - Mockup ricerca provvedimento (inseritore/capofila)</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="">
-  <meta name="author" content="">
+	<meta charset="utf-8">
+	<title>Monitoraggio Provvedimenti - Mockup ricerca provvedimento (inseritore/capofila)</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="">
 
-	<!--link rel="stylesheet/less" href="less/bootstrap.less" type="text/css" /-->
-	<!--link rel="stylesheet/less" href="less/responsive.less" type="text/css" /-->
-	<!--script src="js/less-1.3.3.min.js"></script-->
-	<!--append ‘#!watch’ to the browser URL, then refresh the page. -->
-	
-	
+	<link href="css/normalize.css" rel="stylesheet" />
 	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/bootstrap-responsive.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<!-- <link href="css/bootstrap-responsive.min.css" rel="stylesheet">  -->
+	<link href="css/font-awesome.min.css" rel="stylesheet" >
 	<link href="css/style.css" rel="stylesheet">
-	
-	
 
-  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-  <!--[if lt IE 9]>
-    <script src="js/html5shiv.js"></script>
-  <![endif]-->
-
-  <!-- Fav and touch icons -->
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/apple-touch-icon-144-precomposed.png">
-  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/apple-touch-icon-114-precomposed.png">
-  <link rel="apple-touch-icon-precomposed" sizes="7large72" href="img/apple-touch-icon-72-precomposed.png">
-  <link rel="apple-touch-icon-precomposed" href="img/apple-touch-icon-57-precomposed.png">
-  <link rel="shortcut icon" href="img/favicon.png">
-  
+	<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+	  <script src="js/html5shiv.js"></script>
+	<![endif]-->
+	
+	<!-- Fav icons -->
+	<link rel="shortcut icon" href="favicon.ico" type="x-icon">
+	<link rel="icon" href="favicon.ico" type="x-icon">
+	
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/scripts.js"></script>
@@ -46,19 +36,45 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="span10 offset2">
-				<form class="form-horizontal">
+			<div class="span4">
+				<div class="form-horizontal">
 					<div class="control-group">
-						<label class="control-label" for="inputEmail">Fonte
-							normativa</label>
+						<label class="control-label" for="governo">Governo</label>
 						<div class="controls">
-							<input type="text" id="inputEmail" class="input-xlarge">
+							<select id="governo" class="input-xlarge">
+								<option>Monti</option>
+								<option>Letta</option>
+								<option>Renzi</option>
+							</select>
 						</div>
 					</div>
+				
 					<div class="control-group">
 						<label class="control-label" for="art">Art.</label>
 						<div class="controls">
 							<input type="text" id="art" class="input-xlarge">
+						</div>
+					</div>
+					
+					<div class="control-group">
+						<label class="control-label" for="titoloOggetto">Titolo / Oggetto</label>
+						<div class="controls">
+							<input type="text" id="titoloOggetto" class="input-xlarge" >
+						</div>
+					</div>
+					
+				</div>
+			</div>
+			<div class="span6">
+				<div class="form-horizontal">
+				
+					<div class="control-group">
+						<label class="control-label" for="tipologia">Tipologia</label>
+						<div class="controls">
+							<select id="tipologia" class="input-xlarge">
+								<option>Proponente MEF</option>
+								<option>Concertante MEF</option>
+							</select>
 						</div>
 					</div>
 					<div class="control-group">
@@ -67,38 +83,14 @@
 							<input type="text" id="comma" class="input-xlarge">
 						</div>
 					</div>
-					<div class="control-group">
-						<label class="control-label" for="provvDaAdottare">Provvedimento
-							da adottare</label>
-						<div class="controls">
-							<select id="provvDaAdottare" class="span3">
-								<option>Sceglierne uno...</option>
-								<option>Test 1</option>
-								<option>Test 2</option>
-							</select>
-						</div>
-					</div>
-					<div class="control-group">
-						<label class="control-label" for="titoloOggetto">Titolo /
-							Oggetto</label>
-						<div class="controls">
-							<input type="text" id="titoloOggetto" class="input-xlarge" cols="30" rows="3"></input>
-						</div>
-					</div>
-					<div class="control-group">
-						<span class="control-label">Stato di attuazione Da</span>
-						<div class="controls form-inline">
-							<label for="inputValue"></label> <input type="text" id="inputKey">&nbsp;<i class="icon-calendar icon-large"></i>
-							<label for="inputValue">&nbsp;&nbsp;A</label> <input type="text"
-								id="inputValue">&nbsp;<i class="icon-calendar icon-large"></i>
-						</div>
-					</div>
+
+
 					<div class="control-group">
 						<label class="control-label" for="statoDiAttuazione">Stato
 							di attuazione</label>
 						<div class="controls">
 							<select id="statoDiAttuazione" class="input-xlarge">
-								<option>Sceglierne uno...</option>
+								<option>Tutti gli stati</option>
 								<option>Inserito</option>
 								<option>Sospeso</option>
 								<option>Fine lavorazione</option>
@@ -109,35 +101,70 @@
 							</select>
 						</div>
 					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="span2 offset1">
+				<h5><a class="accordion-toggle" data-toggle="collapse" href="#ricercaAvanzata">
+	                      Ricerca avanzata
+	                    </a></h5>
+     		</div>
+		</div>
+		<div class="row collapse" id="ricercaAvanzata">
+			<div class="span4">
+				<div class="form-horizontal">
 					<div class="control-group">
-						<label class="control-label" for="enteCapofila">Ente
-							Capofila (DD)</label>
-						<div class="controls">
-							<select id="enteCapofila" class="input-xlarge">
-								<option>Sceglierne uno...</option>
-								<option>Test 1</option>
-								<option>Test 2</option>
-							</select>
+						<span class="control-label">Termine di scadenza</span>
+						<div class="controls form-inline">
+							<label for="dataDa">Da&nbsp;</label> <input type="text" id="dataDa" class="input-small" maxlength="10" placeholder="GG/MM/AAAAA">&nbsp;
+							<i class="icon-calendar icon-large"></i>
+							<label for="dataA">&nbsp;&nbsp;A&nbsp;</label> <input type="text"
+								id="dataA" class="input-small" maxlength="10" placeholder="GG/MM/AAAAA" >&nbsp;<i class="icon-calendar icon-large"></i>
 						</div>
 					</div>
 					<div class="control-group">
-						<label class="control-label" for="proponente">Proponente
-							(DD)</label>
+						<label class="control-label" for="inputFonte">Fonte
+							normativa</label>
 						<div class="controls">
-							<select id="proponente" class="input-xlarge">
-								<option>Sceglierne uno...</option>
-								<option>Test 1</option>
-								<option>Test 2</option>
+							<input type="text" id="inputFonte" class="input-xlarge">
+						</div>
+					</div>
+					
+				</div>
+			</div>
+			<div class="span6">
+				<div class="form-horizontal">					
+
+					<div class="control-group">
+						<label class="control-label" for="provvDaAdottare">Provvedimento
+							da adottare</label>
+						<div class="controls">
+							<select id="provvDaAdottare" class="input-xlarge">
+								<option>Tutti</option>
+								<option>Convenzione</option>
+								<option>D.I.</option>
+								<option>D.M.</option>
+								<option>Decreto direttoriale</option>
+								<option>d.P.C.M.</option>  
+								<option>DPR (regolamento delegificazione)</option>
+								<option>Altro</option>
 							</select>
 						</div>
 					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="span12">
+				<div class="form-horizontal">
 					<div class="control-group">
 						<div class="form-actions">
 							<button type="submit" class="btn btn-primary">Ricerca &nbsp;<i class="icon-search"></i></button>
 							<button type="button" class="btn">Annulla &nbsp;<i class="icon-eraser"></i></button>
 						</div>
 					</div>
-				</form>
+				</div>
 			</div>
 		</div>
 		<div class="row">
@@ -146,186 +173,203 @@
 			</div>
 		</div>
 		<div class="row">
-		<div class="span12" style="overflow:auto">
-			<table class="table table-hover table-bordered">
-				<thead>
-					<tr>
-						<th>
-							#
-						</th>
-						<th>
-							Tipologia
-						</th>
-						<th>
-							Fonte nominativa
-						</th>
-						<th>
-							Art.
-						</th>
-						<th>
-							Comma
-						</th>
-						<th>
-							Provv. da adottare
-						</th>
-						<th>
-							Titolo / Oggetto
-						</th>
-						<th>
-							Stato di attuazione
-						</th>
-						<th>
-							Ente Capofila
-						</th>
-						<th>
-							Proponente 
-						</th>
-						<th>
-							Ente 
-						</th>
-						<th>
-							Modifica 
-						</th>
-						<th>
-							Elimina 
-						</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>
-							<a href="#">1</a>
-						</td>
-						<td>
-							Proponente MEF
-						</td>
-						<td>
-							D.L. 145/2013 conv. Legge 9/2014
-						</td>
-						<td>
-							2
-						</td>
-						<td>
-							1 lett. h)
-						</td>
-						<td>
-							D.I.
-						</td>
-						<td class="titoloOggetto">
-							<a href="#" title="definizione criteri e modalità di concessione aevolazioni in favore della nuova imprenditorialità nei settori dei beni e dell'erogazione dei servizi">definizione criteri e modalità di concessione aevolazioni in favore della nuova...</a>
-						</td>
-						<td>
-							in istruttoria 
-						</td>
-						<td>
-							Agenzia Dogane e Monopoli
-						</td>
-						<td>
-							Agenzia Dogane e Monopoli
-						</td>
-						<td class="nowrap">
-							Agenzia Entrate e Territorio&nbsp;&nbsp; <i class="icon-check "></i>&nbsp;<i class="icon-paper-clip "></i>&nbsp;<i class="icon-file-alt"></i><br>
-							Ag. Dogane e Monopoli<br>
-							Ag. Entrate<br>
-							Ag. Territorio	
-						</td>
-						<td class="center">
-							<i class="icon-pencil icon-large gray"></i>
-						</td>
-						<td class="center">
-							<i class="icon-trash icon-large gray"></i>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<a href="#">2</a>
-						</td>
-						<td>
-							Lorem ipsum..
-						</td>
-						<td>
-							Lorem ipsum..
-						</td>
-						<td>
-							Lorem ipsum..
-						</td>
-						<td>
-							Lorem ipsum..
-						</td>
-						<td>
-							Lorem ipsum..
-						</td>
-						<td>
-							<a href="#">Lorem ipsum..</a>
-						</td>
-						<td>
-							Lorem ipsum..
-						</td>
-						<td>
-							Lorem ipsum..
-						</td>
-						<td>
-							Lorem ipsum..
-						</td>
-						<td class="nowrap">
-							Agenzia Entrate e Territorio&nbsp;&nbsp; <i class="icon-check "></i>&nbsp;<i class="icon-paper-clip "></i>&nbsp;<i class="icon-file-alt"></i><br>
-							Ag. Dogane e Monopoli<br>
-							Ag. Entrate&nbsp;&nbsp; <i class="icon-check "></i>&nbsp;<i class="icon-paper-clip "></i><br>
-							Ag. Territorio	
-						</td>
-						<td class="center">
-							<i class="icon-pencil icon-large gray"></i>
-						</td>
-						<td class="center">
-							<i class="icon-trash icon-large gray"></i>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<a href="#">3</a>
-						</td>
-						<td>
-							Lorem ipsum..
-						</td>
-						<td>
-							Lorem ipsum..
-						</td>
-						<td>
-							Lorem ipsum..
-						</td>
-						<td>
-							Lorem ipsum..
-						</td>
-						<td>
-							Lorem ipsum..
-						</td>
-						<td>
-							<a href="#">Lorem ipsum..</a>
-						</td>
-						<td>
-							Lorem ipsum..
-						</td>
-						<td>
-							Lorem ipsum..
-						</td>
-						<td>
-							Lorem ipsum..
-						</td>
-						<td class="nowrap">
-							Agenzia Entrate e Territorio<br>
-							Ag. Dogane e Monopoli<br>
-							Ag. Entrate<br>
-							Ag. Territorio&nbsp;&nbsp; <i class="icon-check "></i>&nbsp;<i class="icon-file-alt"></i><br>	
-						</td>
-						<td class="center">
-							<i class="icon-pencil icon-large gray"></i>
-						</td>
-						<td class="center">
-							<i class="icon-trash icon-large gray"></i>
-						</td>
-					</tr>
-				</tbody>
-			</table>
+			<div class="span12">
+				<table class="table table-hover table-bordered">
+					<thead>
+						<tr>
+							<th>
+								#
+							</th>
+							<th>
+								Tipologia
+							</th>
+							<th>
+								Fonte nominativa
+							</th>
+							<th>
+								Art.
+							</th>
+							<th>
+								Comma
+							</th>
+							<th>
+								Provv. da adottare
+							</th>
+							<th>
+								Titolo / Oggetto
+							</th>
+							<th>
+								Stato di attuazione
+							</th>
+							<th>
+								Ente Capofila
+							</th>
+							<th>
+								Proponente 
+							</th>
+							<th>
+								Assegnazione 
+							</th>
+							<!-- 
+							<th>
+								Modifica 
+							</th>
+							<th>
+								Elimina 
+							</th>
+							 -->
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+								<a href="#">1</a>
+							</td>
+							<td>
+								Proponente MEF
+							</td>
+							<td>
+								D.L. 145/2013 conv. Legge 9/2014
+							</td>
+							<td>
+								2
+							</td>
+							<td>
+								1 lett. h)
+							</td>
+							<td>
+								D.I.
+							</td>
+							<td class="titoloOggetto">
+								<a href="#" title="definizione criteri e modalità di concessione aevolazioni in favore della nuova imprenditorialità nei settori dei beni e dell'erogazione dei servizi">definizione criteri e modalità di concessione aevolazioni in favore della nuova...</a>
+							</td>
+							<td>
+								in istruttoria 
+							</td>
+							<td>
+								Agenzia Dogane e Monopoli
+							</td>
+							<td>
+								Agenzia Dogane e Monopoli
+							</td>
+							<td class="nowrap">
+								Agenzia Entrate e Territorio&nbsp;&nbsp; <i class="icon-check "></i>&nbsp;<i class="icon-paper-clip "></i>&nbsp;<i class="icon-file-alt"></i><br>
+								Ag. Dogane e Monopoli<br>
+								Ag. Entrate<br>
+								Ag. Territorio	
+							</td>
+							<!-- 
+							<td class="center">
+								<i class="icon-pencil icon-large gray"></i>
+							</td>
+							<td class="center">
+								<i class="icon-trash icon-large gray"></i>
+							</td>
+							 -->
+						</tr>
+						<tr>
+							<td>
+								<a href="#">2</a>
+							</td>
+							<td>
+								Lorem ipsum..
+							</td>
+							<td>
+								Lorem ipsum..
+							</td>
+							<td>
+								Lorem ipsum..
+							</td>
+							<td>
+								Lorem ipsum..
+							</td>
+							<td>
+								Lorem ipsum..
+							</td>
+							<td>
+								<a href="#">Lorem ipsum..</a>
+							</td>
+							<td>
+								Lorem ipsum..
+							</td>
+							<td>
+								Lorem ipsum..
+							</td>
+							<td>
+								Lorem ipsum..
+							</td>
+							<td class="nowrap">
+								Agenzia Entrate e Territorio&nbsp;&nbsp; <i class="icon-check "></i>&nbsp;<i class="icon-paper-clip "></i>&nbsp;<i class="icon-file-alt"></i><br>
+								Ag. Dogane e Monopoli<br>
+								Ag. Entrate&nbsp;&nbsp; <i class="icon-check "></i>&nbsp;<i class="icon-paper-clip "></i><br>
+								Ag. Territorio	
+							</td>
+							<!-- 
+							<td class="center">
+								<i class="icon-pencil icon-large gray"></i>
+							</td>
+							<td class="center">
+								<i class="icon-trash icon-large gray"></i>
+							</td>
+							 -->
+						</tr>
+						<tr>
+							<td>
+								<a href="#">3</a>
+							</td>
+							<td>
+								Lorem ipsum..
+							</td>
+							<td>
+								Lorem ipsum..
+							</td>
+							<td>
+								Lorem ipsum..
+							</td>
+							<td>
+								Lorem ipsum..
+							</td>
+							<td>
+								Lorem ipsum..
+							</td>
+							<td>
+								<a href="#">Lorem ipsum..</a>
+							</td>
+							<td>
+								Lorem ipsum..
+							</td>
+							<td>
+								Lorem ipsum..
+							</td>
+							<td>
+								Lorem ipsum..
+							</td>
+							<td class="nowrap">
+								Agenzia Entrate e Territorio<br>
+								Ag. Dogane e Monopoli<br>
+								Ag. Entrate<br>
+								Ag. Territorio&nbsp;&nbsp; <i class="icon-check "></i>&nbsp;<i class="icon-file-alt"></i><br>	
+							</td>
+							<!-- 
+							<td class="center">
+								<i class="icon-pencil icon-large gray"></i>
+							</td>
+							<td class="center">
+								<i class="icon-trash icon-large gray"></i>
+							</td>
+							-->
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="span12">
+				<div class="pagination">
+				  <ul>
+				    <li><a class="disabled" href="#">&#171;</a></li>
+				    <li><a class="active" href="#">1</a></li>
+				    <li><a class="disabled" href="#">&#187;</a></li>
+				  </ul>
+				</div>
 			</div>
 		</div>
 	</div>
