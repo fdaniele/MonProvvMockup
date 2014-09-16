@@ -16,6 +16,16 @@ $(document).ready(function() {
     $("#ricerca").click(function() {
          risultatiRicerca.show();
     });
+    
+    $("#nuovo").click(function() {
+    	window.location.href = "nuovo.html";
+    });
+    
+    
+    $('.table > tbody > tr').click(function() {
+    	window.location.href = "dettaglio.html";
+    });
+    
 });
 
 
