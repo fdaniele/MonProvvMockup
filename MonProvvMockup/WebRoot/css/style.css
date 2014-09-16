@@ -1,7 +1,42 @@
 .container {
 	color: #545454;
+	width: 1560px;
 }
 
+.span12 {
+	width: 1540px;
+}
+
+.span10 {
+	width: 1280px;
+}
+
+.span6 {
+	width: 760px;
+}
+
+.span4 {
+	width: 500px;
+}
+
+.span2 {
+	width: 240px;
+}
+
+.span1 {
+	width: 110px;
+}
+
+.offset2 {
+	margin-left: 260px;
+}
+
+.offset1 {
+	margin-left: 130px;
+}
+
+
+/*
 .form-horizontal .control-label {
 	float: left;
 	width: 200px;
@@ -9,13 +44,14 @@
 	padding-right: 10px;
 	text-align: right;
 }
+*/
 
-.form-actions{
+.form-actions {
 	background-color:inherit;
 }
 
 .ricerca .form-horizontal .form-actions {
-	padding-left: 280px;
+	padding-left: 600px;
 }
 .gray {
 	color: gray;
@@ -54,3 +90,9 @@ border-bottom: 1px solid;
 border-bottom: 1px solid;
 display: inline-block;
 }
+
+
+#ricercaAvanzata.in {
+	overflow: visible;
+}
+
