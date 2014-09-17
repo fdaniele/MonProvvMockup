@@ -66,6 +66,14 @@
 						</div>
 					</div>
 					
+					<div class="control-group">
+						<div class="controls">
+							<h5><a data-toggle="collapse" data-target="#ricercaAvanzata" id="btnRicercaAvanzata">
+	                	      Ricerca avanzata </a><i class="icon-caret-down icon-large" id="btnRicAvDown"></i> <i class="icon-caret-up icon-large" id="btnRicAvUp"></i>
+	                    	</h5>
+						</div>
+					</div>
+					
 				</div>
 			</div>
 			<div class="span6">
@@ -105,13 +113,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="row">
-			<div class="span2 offset1">
-				<h5><a class="accordion-toggle" data-toggle="collapse" href="#ricercaAvanzata">
-	                      Ricerca avanzata
-	                    </a></h5>
-     		</div>
-		</div>
+
 		<div class="row collapse" id="ricercaAvanzata">
 			<div class="span4">
 				<div class="form-horizontal">
@@ -155,17 +157,45 @@
 					</div>
 					
 					<div class="control-group">
-						<label class="control-label" for="enteAssegnatario">Ente assegnatario</label>
+						<label class="control-label" for="enteAssegnatario">Amm./uffici coinvolti</label>
 						<div class="controls">
 							<select id="enteAssegnatario" class="input-xlarge multiselect" multiple="multiple">
 								<option>Tutti</option>
-								<option>Convenzione</option>
-								<option>D.I.</option>
-								<option>D.M.</option>
-								<option>Decreto direttoriale</option>
-								<option>d.P.C.M.</option>  
-								<option>DPR (regolamento delegificazione)</option>
-								<option>Altro</option>
+								<option>(RGS) su proposta del MAE di concerto con Min.affari europei                                                                 </option>  
+								<option>Agenzia Entrate e Territorio                                                                                                 </option>
+								<option>Ag. Dogane e Monopoli                                                                                                        </option>
+								<option>Ag. Entrate                                                                                                                  </option>
+								<option>Ag. Territorio                                                                                                               </option>
+								<option>Agenzia Dogane e Monopoli                                                                                                    </option>
+								<option>Agenzia Entrate                                                                                                              </option>
+								<option>Agenzia Entrate/Guardia di finanza                                                                                           </option>
+								<option>Dipartimento finanze (DLTFF)                                                                                                 </option>
+								<option>Dip.to Tesoro                                                                                                                </option>
+								<option>Dogane e monopoli                                                                                                            </option>
+								<option>dPCM su proposta del MEF (Dipto finanze DLTFF) di concerto con il Min.Interno                                                </option>
+								<option>dPCM su proposta MEF (Dipto finanze - DLTFF, RGS)  previo parere delle Commissioni parlamentari competenti per materia       </option>
+								<option>dPCM su proposta MEF (Dipto finanze) di concerto Ministro della giustizia sentito il Consiglio Nazionale Notariato           </option>
+								<option>dPCM su proposta MEF (RGS e Dipto tesoro)   di concerto Min.Coesione territoriale                                            </option>
+								<option>Interno e Giustizia                                                                                                          </option>
+								<option>MEF (Dipto finanze Ag.Dogane, RGS) di concerto MISE                                                                          </option>
+								<option>MEF (Dipto finanze) di concerto Coesione territoriale, Affari regionali e MISE                                               </option>
+								<option>MEF (Dipto finanze) d'intesa con Agenzia Entrate e ISTAT                                                                     </option>
+								<option>MEF (Dipto finanze) Interno sentita la Conf. Stato Città                                                                     </option>
+								<option>MEF (Dipto finanze) sentita l’Agenzia per l’Italia digitale                                                                  </option>
+								<option>MEF (Dipto finanze, Ag.entrate e Equitalia) di concerto MISE                                                                 </option>
+								<option>MEF (Dipto finanze, Ag.entrate) di concerto MISE e MIBACT                                                                    </option>
+								<option>MEF (Dipto finanze, RGS) di concerto Min.Interno    sentita la Conf. Sato città                                              </option>
+								<option>MEF (Dipto finanze-RGS) di concerto Sviluppo Economico                                                                       </option>
+								<option>MEF (Dipto tesoro) sentita la Banca d'Italia                                                                                 </option>
+								<option>MEF (Dipto tesoro)di concerto MISE                                                                                           </option>
+								<option>MEF (RGS)  Conf. Stato-Regioni e prov. Autonome (intesa)                                                                     </option>
+								<option>MEF (RGS) di concerto Coesione territoriale, Affari regionali e MISE                                                         </option>
+								<option>MEF (RGS) Istruzione, università e ricerca / Infrastrutture e Trasporti                                                      </option>
+								<option>MEF (RGS) sentita l'Agenzia Italia Digitale                                                                                  </option>
+								<option>MEF (RGS) su proposta del''Agenzia per l'Italia digitale                                                                     </option>
+								<option>MEF (RGS, Dipto tesoro) d'intesa Lavoro e Politiche Sociali /MISE                                                            </option>
+								<option>Ragioniere generale di concerto con Direttore Ag. Entrate                                                                    </option>
+								<option>RGS                                                                                                                          </option>
 							</select>
 						</div>
 					</div>
@@ -176,17 +206,13 @@
 			<div class="span12">
 				<div class="form-horizontal">
 					<div class="control-group">
-						<div class="form-actions">
-							<button type="submit" class="btn btn-primary" id="ricerca">Ricerca &nbsp;<i class="icon-search"></i></button>
-							<button type="button" class="btn" id="annulla">Annulla &nbsp;<i class="icon-eraser"></i></button>
+						<div class="form-actions pull-right">
+							<button type="submit" class="btn " id="ricerca">Ricerca &nbsp;<i class="icon-search"></i></button>
+							<button type="button" class="btn " id="annulla">Pulisci &nbsp;<i class="icon-eraser"></i></button>
+							<button type="submit" class="btn btn-primary " id="nuovo">Nuovo provvedimento &nbsp;<i class="icon-plus"></i></button>
 						</div>
 					</div>
 				</div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="span12">
-				<button type="submit" class="btn btn-primary pull-right" id="nuovo">Nuovo provvedimento &nbsp;<i class="icon-plus"></i></button>
 			</div>
 		</div>
 	</div>
@@ -203,6 +229,9 @@
 						<tr>
 							<th>
 								#
+							</th>
+							<th>
+								Governo
 							</th>
 							<th>
 								Tipologia
@@ -234,10 +263,10 @@
 							<th>
 								Assegnazione 
 							</th>
-							<!-- 
 							<th>
-								Modifica 
+								Allegati 
 							</th>
+							<!-- 
 							<th>
 								Elimina 
 							</th>
@@ -248,6 +277,9 @@
 						<tr>
 							<td>
 								<a href="#">1</a>
+							</td>
+							<td>
+								Letta
 							</td>
 							<td>
 								Proponente MEF
@@ -268,7 +300,7 @@
 								<a href="#" title="definizione criteri e modalità di concessione aevolazioni in favore della nuova imprenditorialità nei settori dei beni e dell'erogazione dei servizi">definizione criteri e modalità di concessione aevolazioni in favore della nuova...</a>
 							</td>
 							<td>
-								in istruttoria 
+								Inserito 
 							</td>
 							<td>
 								Agenzia Dogane e Monopoli
@@ -282,106 +314,14 @@
 								Ag. Entrate<br>
 								Ag. Territorio	
 							</td>
-							<!-- 
 							<td class="center">
-								<i class="icon-pencil icon-large gray"></i>
+								<i class="icon-paper-clip icon-large gray"></i>
 							</td>
+							<!-- 
 							<td class="center">
 								<i class="icon-trash icon-large gray"></i>
 							</td>
 							 -->
-						</tr>
-						<tr>
-							<td>
-								<a href="#">2</a>
-							</td>
-							<td>
-								Lorem ipsum..
-							</td>
-							<td>
-								Lorem ipsum..
-							</td>
-							<td>
-								Lorem ipsum..
-							</td>
-							<td>
-								Lorem ipsum..
-							</td>
-							<td>
-								Lorem ipsum..
-							</td>
-							<td>
-								<a href="#">Lorem ipsum..</a>
-							</td>
-							<td>
-								Lorem ipsum..
-							</td>
-							<td>
-								Lorem ipsum..
-							</td>
-							<td>
-								Lorem ipsum..
-							</td>
-							<td class="nowrap">
-								Agenzia Entrate e Territorio&nbsp;&nbsp; <i class="icon-check "></i>&nbsp;<i class="icon-paper-clip "></i>&nbsp;<i class="icon-file-alt"></i><br>
-								Ag. Dogane e Monopoli<br>
-								Ag. Entrate&nbsp;&nbsp; <i class="icon-check "></i>&nbsp;<i class="icon-paper-clip "></i><br>
-								Ag. Territorio	
-							</td>
-							<!-- 
-							<td class="center">
-								<i class="icon-pencil icon-large gray"></i>
-							</td>
-							<td class="center">
-								<i class="icon-trash icon-large gray"></i>
-							</td>
-							 -->
-						</tr>
-						<tr>
-							<td>
-								<a href="#">3</a>
-							</td>
-							<td>
-								Lorem ipsum..
-							</td>
-							<td>
-								Lorem ipsum..
-							</td>
-							<td>
-								Lorem ipsum..
-							</td>
-							<td>
-								Lorem ipsum..
-							</td>
-							<td>
-								Lorem ipsum..
-							</td>
-							<td>
-								<a href="#">Lorem ipsum..</a>
-							</td>
-							<td>
-								Lorem ipsum..
-							</td>
-							<td>
-								Lorem ipsum..
-							</td>
-							<td>
-								Lorem ipsum..
-							</td>
-							<td class="nowrap">
-								Agenzia Entrate e Territorio<br>
-								Ag. Dogane e Monopoli<br>
-								Ag. Entrate<br>
-								Ag. Territorio&nbsp;&nbsp; <i class="icon-check "></i>&nbsp;<i class="icon-file-alt"></i><br>	
-							</td>
-							<!-- 
-							<td class="center">
-								<i class="icon-pencil icon-large gray"></i>
-							</td>
-							<td class="center">
-								<i class="icon-trash icon-large gray"></i>
-							</td>
-							-->
 						</tr>
 					</tbody>
 				</table>

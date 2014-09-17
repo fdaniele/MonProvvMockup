@@ -51,7 +51,7 @@
 }
 
 .ricerca .form-horizontal .form-actions {
-	padding-left: 600px;
+	border-top: inherit;
 }
 .gray {
 	color: gray;

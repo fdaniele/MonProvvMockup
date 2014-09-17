@@ -5,6 +5,19 @@ $(document).ready(function() {
 	});
     
     
+    var btnRicAvDown = $("#btnRicAvDown");
+    var btnRicAvUp = $("#btnRicAvUp");
+    btnRicAvUp.hide();
+    $('#ricercaAvanzata').on('hide', function () {
+    	  btnRicAvDown.show();
+    	  btnRicAvUp.hide();
+    });
+    
+    $('#ricercaAvanzata').on('show', function () {
+  	  btnRicAvDown.hide();
+  	  btnRicAvUp.show();
+    });
+    
     $("#annulla").click(function() {
         location.reload();
     });
