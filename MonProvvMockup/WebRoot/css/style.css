@@ -1,3 +1,41 @@
+/** CUSTOM RICERCA **/
+.ricerca .form-actions{
+	background-color:inherit;
+}
+
+.ricerca .form-horizontal .form-actions {
+	padding-left: 280px;
+}
+
+/** CUSTOM INSERIMENTO **/
+.inserimento .form-horizontal .form-actions {
+	padding-left: 280px;
+}
+
+.inserimento .form-actions{
+	background-color:inherit;
+	border: inherit;
+}
+
+.inserimento .table a {
+	text-decoration: inherit;
+}
+
+th.allegati {
+	width: 150px;
+}
+
+/** CUSTOM DETTAGLIO **/
+.dettaglio .control-group .control-label {
+	padding-top:inherit;
+	font-weight: bold;
+}
+.dettaglio .control-group span {
+	padding-top:5px;
+	margin-bottom: 5px;
+}
+
+/** GENERICO **/
 body {
 	background-color: #E8E8E8;
 }
@@ -13,7 +51,7 @@ body {
 }
 
 .span10 {
-	width: 1020px;
+	width: 1280px;
 }
 
 .span7 {
@@ -21,7 +59,7 @@ body {
 }
 
 .span6 {
-	width: 604px;
+	width: 760px;
 }
 
 .span5 {
@@ -29,24 +67,25 @@ body {
 }
 
 .span4 {
-	width: 396px;
+	width: 500px;
 }
 
 
 .span2 {
-	width: 188px;
+	width: 240px;
 }
 
 .span1 {
-	width: 84px;
+	float: left;
+	width: 110px;
 }
 
 .offset2 {
-	margin-left: 208px;
+	margin-left: 260px;
 }
 
 .offset1 {
-	margin-left: 104px;
+	margin-left: 130px;
 }
 
 
@@ -81,6 +120,11 @@ th {
 
 .center {
 	text-align: center !important; 
+}
+
+.vcenter {
+	text-align: center !important; 
+	vertical-align: middle !important;
 }
 
 .table a {
