@@ -1,8 +1,8 @@
 $(document).ready(function() {
-//    $('.multiselect').multiselect({
-//            nonSelectedText: 'Tutti',
-//            numberDisplayed: 20
-//	});
+    $('.multiselect').multiselect({
+            nonSelectedText: 'Tutti',
+            numberDisplayed: 20
+	});
     
     
     var btnRicAvDown = $("#btnRicAvDown");
@@ -38,9 +38,9 @@ $(document).ready(function() {
     });
     
     
-//    $('.table > tbody > tr').click(function() {
-//    	window.location.href = "dettaglio.html";
-//    });
+    $('.table > tbody > tr').click(function() {
+    	window.location.href = "dettaglio.html";
+    });
     
     //Inserimento Enti Assegnatari
     
