@@ -1,3 +1,41 @@
+/** CUSTOM RICERCA **/
+.ricerca .form-actions{
+	background-color:inherit;
+}
+
+.ricerca .form-horizontal .form-actions {
+	padding-left: 280px;
+}
+
+/** CUSTOM INSERIMENTO **/
+.inserimento .form-horizontal .form-actions {
+	padding-left: 280px;
+}
+
+.inserimento .form-actions{
+	background-color:inherit;
+	border: inherit;
+}
+
+.inserimento .table a {
+	text-decoration: inherit;
+}
+
+th.allegati {
+	width: 150px;
+}
+
+/** CUSTOM DETTAGLIO **/
+.dettaglio .control-group .control-label {
+	padding-top:inherit;
+	font-weight: bold;
+}
+.dettaglio .control-group span {
+	padding-top:5px;
+	margin-bottom: 5px;
+}
+
+/** GENERICO **/
 .container {
 	color: #545454;
 	width: 1560px;
@@ -24,6 +62,7 @@
 }
 
 .span1 {
+	float: left;
 	width: 110px;
 }
 
@@ -67,6 +106,11 @@ th {
 
 .center {
 	text-align: center !important; 
+}
+
+.vcenter {
+	text-align: center !important; 
+	vertical-align: middle !important;
 }
 
 .table a {

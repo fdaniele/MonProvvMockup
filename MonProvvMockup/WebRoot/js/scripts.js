@@ -1,8 +1,8 @@
 $(document).ready(function() {
-    $('.multiselect').multiselect({
-            nonSelectedText: 'Tutti',
-            numberDisplayed: 20
-	});
+//    $('.multiselect').multiselect({
+//            nonSelectedText: 'Tutti',
+//            numberDisplayed: 20
+//	});
     
     
     var btnRicAvDown = $("#btnRicAvDown");
@@ -22,6 +22,9 @@ $(document).ready(function() {
         location.reload();
     });
     
+    $("#indietro").click(function() {
+    	window.history.back();
+    });
     
     var risultatiRicerca = $("#risultatiRicerca");
     risultatiRicerca.hide();
@@ -31,14 +34,29 @@ $(document).ready(function() {
     });
     
     $("#nuovo").click(function() {
-    	window.location.href = "nuovo.html";
+    	window.location.href = "inserimento.html";
     });
     
     
-    $('.table > tbody > tr').click(function() {
-    	window.location.href = "dettaglio.html";
+//    $('.table > tbody > tr').click(function() {
+//    	window.location.href = "dettaglio.html";
+//    });
+    
+    //Inserimento Enti Assegnatari
+    
+    var assegnatarioDipTesoro = $("#assegnatarioDipTesoro");
+    assegnatarioDipTesoro.hide();
+    
+    
+    $("#insertEnte").click(function() {
+    	//assegnatarioDipTesoro.show();
+    	assegnatarioDipTesoro.fadeIn( 1000 );
     });
     
+    $("#deleteEnte").click(function() {
+    	//assegnatarioDipTesoro.show();
+    	assegnatarioDipTesoro.fadeOut( 1000 );
+    });    
 });
 
 
