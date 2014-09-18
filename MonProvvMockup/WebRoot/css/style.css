@@ -1,6 +1,11 @@
+body {
+	background-color: #E8E8E8;
+}
+
 .container {
 	color: #545454;
-	width: 1560px;
+	width: 1540px;
+	background-color: #FFFFFF;
 }
 
 .span12 {
@@ -8,31 +13,40 @@
 }
 
 .span10 {
-	width: 1280px;
+	width: 1020px;
+}
+
+.span7 {
+	width: 708px;
 }
 
 .span6 {
-	width: 760px;
+	width: 604px;
 }
 
-.span4 {
+.span5 {
 	width: 500px;
 }
 
+.span4 {
+	width: 396px;
+}
+
+
 .span2 {
-	width: 240px;
+	width: 188px;
 }
 
 .span1 {
-	width: 110px;
+	width: 84px;
 }
 
 .offset2 {
-	margin-left: 260px;
+	margin-left: 208px;
 }
 
 .offset1 {
-	margin-left: 130px;
+	margin-left: 104px;
 }
 
 
@@ -96,3 +110,8 @@ display: inline-block;
 	overflow: visible;
 }
 
+.header.container > .row > .span12 {
+	height: 142px;
+	background-image: url(../img/bg_banner.png);
+	background-repeat: no-repeat;
+}
