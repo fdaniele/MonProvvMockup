@@ -1,3 +1,4 @@
+
 /** CUSTOM RICERCA **/
 .ricerca .form-actions{
 	background-color:inherit;
@@ -21,6 +22,16 @@
 	text-decoration: inherit;
 }
 
+.inserimento .control-group .control-label {
+	padding-top:inherit;
+	font-weight: bold;
+}
+
+.inserimento .control-group span {
+	padding-top:5px;
+	margin-bottom: 5px;
+}
+
 th.allegati {
 	width: 150px;
 }
@@ -36,6 +47,10 @@ th.allegati {
 }
 
 /** GENERICO **/
+* {
+  border-radius: 0 !important;
+}
+
 body {
 	background-color: #E8E8E8;
 }
@@ -51,43 +66,45 @@ body {
 }
 
 .span10 {
-	width: 1280px;
+	width: 1277px;
+}
+
+.span8 {
+	width: 1016px;
 }
 
 .span7 {
-	width: 708px;
+	width: 884px;
 }
 
 .span6 {
-	width: 760px;
+	width: 753px;
 }
 
 .span5 {
-	width: 500px;
+	width: 622px;
 }
 
 .span4 {
-	width: 500px;
+	width: 492px;
 }
 
-
 .span2 {
-	width: 240px;
+	width: 229px;
 }
 
 .span1 {
-	float: left;
-	width: 110px;
+	width: 98px;
 }
 
 .offset2 {
-	margin-left: 260px;
+	margin-left: 294px;
 }
 
 .offset1 {
-	margin-left: 130px;
+	margin-left: 160px;
 }
-
+*/
 
 /*
 .form-horizontal .control-label {
@@ -154,8 +171,62 @@ display: inline-block;
 	overflow: visible;
 }
 
-.header.container > .row > .span12 {
+/* > .row > .span12 */
+.header.container  {
 	height: 142px;
 	background-image: url(../img/bg_banner.png);
 	background-repeat: no-repeat;
+}
+
+.utente {
+	display: block;
+	line-height: 40px;
+	background-color: #004383;
+	color: #fff;
+	padding-left: 10px;
+}
+
+.utente > a, .utente > a:visited {
+	color: #fff;
+}
+
+.titolo {
+	line-height: 80px; 
+	padding-left: 30px;
+}
+
+.navbar .nav {
+	background: #193E62;
+}
+
+.navbar .nav>li>a,  .navbar .nav>li>a:visited {
+	color: #fff;
+	font-weight: bold;
+	text-shadow: inherit;
+}
+
+.navbar .nav li.dropdown.open>.dropdown-toggle, .navbar .nav li.dropdown.active>.dropdown-toggle, .navbar .nav li.dropdown.open.active>.dropdown-toggle {
+	color: #fff;
+	background-color: #093697;
+}
+
+.navbar .nav li.dropdown>.dropdown-toggle .caret {
+	border-top-color: #FFF;
+	border-bottom-color: #FFF;
+}
+
+.dropdown-menu {
+	background-color: #555;
+	margin-top: -1px;
+}
+
+.dropdown-menu:before,
+.dropdown-menu:after {
+  display:none !important;
+}
+
+.popover {
+	color: #545454; 
+	max-width: 500px;
+	line-height: 20px;
 }
