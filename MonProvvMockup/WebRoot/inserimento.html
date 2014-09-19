@@ -7,10 +7,13 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
+	<link href="css/normalize.css" rel="stylesheet" />
 	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/bootstrap-responsive.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link href="css/font-awesome.min.css" rel="stylesheet" >
+	<link href="css/bootstrap-multiselect.css" rel="stylesheet" >
+	<link href="css/bootstrap-datepicker.css" rel="stylesheet" >
 	<link href="css/style.css" rel="stylesheet">
+
 	
 	
 
@@ -26,15 +29,44 @@
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap-multiselect.js"></script>
+	<script type="text/javascript" src="js/bootstrap-datepicker.js"></script>
+	<script type="text/javascript" src="js/locales/bootstrap-datepicker.it.js"></script>
 	<script type="text/javascript" src="js/scripts.js"></script>
 	
 </head>
 
 <body>
+	<div class="container header">
+		<div class="row" style="height: 100px" >
+			<div class="span8">
+				<h1 class="titolo">Monitoraggio Provvedimenti</h1>
+			</div>
+			<div class="span4">
+				<span class="utente">Utente: Mario Rossi (Ruolo Capofila) - <a id="popoverNotifiche" href="#">Hai 2 messaggi non letti</a> </span> 
+			</div>
+		</div>
+		<div class="row">
+			<div class="span12">
+				<div class="navbar navbar-custom">
+					<ul class="nav navbar-nav">
+						<li class="dropdown">
+					    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+					      Account
+					      <i class="icon-caret-down"></i>
+					    </a>
+					    <ul class="dropdown-menu">
+			      			<li><a href="#">Test</a></li>
+			    		</ul>
+			  		</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
 	<div class="container inserimento">
 		<div class="row">
 			<div class="span12">
-				<h3 class="text-left underline"><span>Inserimento provvedimenti</span></h3>
+				<h3 class="text-left underline"><span>Inserimento provvedimento</span></h3>
 			</div>
 		</div>
 		<form class="form-horizontal">
@@ -44,7 +76,7 @@
 							<label class="control-label" for="governo">Governo</label>
 							<div class="controls">
 								<select id="governo" class="input-xlarge">
-									<option>Tutti</option>
+									<option>Sceglierne uno...</option>
 									<option>Monti</option>
 									<option>Letta</option>
 									<option>Renzi</option>
@@ -100,13 +132,13 @@
 							<label class="control-label" for="titoloOggetto">Titolo /
 								Oggetto</label>
 							<div class="controls">
-								<textarea id="titoloOggetto" class="input-xlarge" cols="30" rows="3" ></textarea>
+								<textarea id="titoloOggetto" class="input-xlarge" cols="30" rows="4" ></textarea>
 							</div>
 						</div>
 						<div class="control-group">
 							<label class="control-label" for="titoloOggetto">Termine di scadenza</label>
 							<div class="controls">
-								<input type="text" id="titoloOggetto" class="input-xlarge" placeholder="Formato: gg/mm/aaaa"></input>&nbsp;<i class="icon-calendar icon-large"></i>
+								<input type="text" id="dp1v" class="input-xlarge" placeholder="Formato: gg/mm/aaaa"></input>&nbsp;<i class="icon-calendar icon-large" id="dp1"></i>
 							</div>
 						</div>
 						<div class="control-group">
@@ -149,20 +181,8 @@
 					<table class="table table-hover table-bordered">
 						<thead>
 							<tr>
-								<th>
-									Assegnatari
-								</th>
-								<th>
-									Presa in carico
-								</th>
-								<th class="allegati">
-									Allegati
-								</th>
-								<th>
-									Note
-								</th>
-								<th>
-									Cronologia Modifiche
+								<th style="width: 80%">
+									Organo
 								</th>
 								<th class="center">
 									Elimina
@@ -170,75 +190,25 @@
 							</tr>
 						</thead>
 						<tbody>
-							<tr>
-								<td>
-									Ag. Territorio 
-								</td>
-								<td class="vcenter">
-									<i class="icon-check "></i>
-								</td>
-								<td>
-									Documento 1<br>
-									Documento 2<br>
-									Documento 3<br>
-								</td>
-								<td>
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-								</td>
-								<td class="vcenter">
-									<a href="#myModal" role="button" class="btn" data-toggle="modal"><i class="icon-info icon-large gray"></i></a>
-								</td>	
-								<td class="vcenter">
-									<i class="icon-trash icon-large gray"></i>
-								</td>
-							</tr>
- 							<tr>
-								<td>
-									MEF (Dipto finanze) di concerto Coesione territoriale, Affari regionali e MISE 
-								</td>
-								<td class="vcenter">
-									<i class="icon-check "></i>
-								</td>
-								<td>
-									Documento 1<br>
-									Documento 2<br>
-									Documento 3<br>
-								</td>
-								<td>
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-								</td>
-								<td class="vcenter">
-									<a href="#myModal" role="button" class="btn" data-toggle="modal">Apri</a>
-								</td>								
-								<td class="vcenter">
-									<i class="icon-trash icon-large gray"></i>
-								</td>
-							</tr>
 							<tr id="assegnatarioDipTesoro">
-								<td>
+								<td style="width: 80%">
 									Dip.to Tesoro
+								</td>			
+								
+								<td class="vcenter center">
+									<a href="#" id="deleteEnte"><i class="icon-trash icon-large"></i></a>
 								</td>
-								<td class="center">
-									<i class="icon-check "></i>
-								</td>
-								<td>
-									Documento 1
-								</td>
-								<td>
-									Lorem ipsum dolor sit amet, consectetur
-								</td>
-								<td class="vcenter">
-									<a href="#myModal" role="button" class="btn" data-toggle="modal"><i class="icon-info icon-large gray"></i></a>
-								</td>									
-								<td class="vcenter">
-									<i id="deleteEnte" class="icon-trash icon-large gray"></i>
+							</tr>
+							<tr id="noRecord">
+								<td colspan="2" class="vcenter">
+									Nessun record trovato.
 								</td>
 							</tr>
 						</tbody>
 					</table>
 				</div>
 				<div class="control-group">
-					<label class="control-label" for="enteAssegnatario">Ente assegnatario</label>
+					<label class="control-label" for="enteAssegnatario">Nuova assegnazione</label>
 					<div class="controls">
 						<select id="enteAssegnatario" class="span3">
 							<option>Sceglierne uno...</option>
@@ -253,19 +223,23 @@
 					</div>
 				</div>
 			</div>
-			<div class="span10 offset2">
-				<div class="control-group">
-					<div class="form-actions">
-						<button type="submit" class="btn btn-primary">Salva &nbsp;<i class="icon-search"></i></button>
-						<button type="button" class="btn" id="indietro">Annulla &nbsp;<i class="icon-eraser"></i></button>
+		</form>
+		<div class="row">
+			<div class="span12">
+				<div class="form-horizontal">
+					<div class="control-group">
+						<div class="form-actions pull-right">
+							<button type="submit" class="btn btn-primary" id="salva">Inserisci &nbsp;<i class="icon-save"></i></button>
+							<button type="button" class="btn" id="annulla">Annulla &nbsp;<i class="icon-undo"></i></button>
+						</div>
 					</div>
 				</div>
 			</div>
-		</form>
+		</div>
 	</div>
-<!--  finestra modale -->
+	
+<!--  finestra modale 
  
-<!-- Modal -->
 	<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog"
 		aria-labelledby="myModalLabel" aria-hidden="true">
 		<div class="modal-header">
@@ -315,6 +289,6 @@
 			<button class="btn" data-dismiss="modal" aria-hidden="true">Chiudi</button>
 		</div>
 	</div>
-<!--  fine finestra modale -->
+  fine finestra modale -->
 </body>
 </html>
