@@ -177,9 +177,14 @@ th {
 
 /* > .row > .span12 */
 .header.container  {
-	height: 142px;
+	height: 180px;
 	background-image: url(../img/bg_banner.png);
 	background-repeat: no-repeat;
+	border-bottom: 1px solid #ccc;
+}
+
+.header.container > .row {
+	height: 140px;
 }
 
 .utente {
@@ -195,18 +200,28 @@ th {
 }
 
 .titolo {
-	line-height: 80px; 
+	line-height: 100px;
 	padding-left: 30px;
+	text-transform: uppercase;
 }
 
 .navbar .nav {
 	background: #193E62;
 }
 
-.navbar .nav>li>a,  .navbar .nav>li>a:visited {
+.navbar .nav>li>a,  .navbar .nav>li>a:visited, .navbar .dropdown-menu>li>a, .navbar .dropdown-menu>li>a:visited {
 	color: #fff;
 	font-weight: bold;
 	text-shadow: inherit;
+}
+
+.navbar .nav>li>a:focus, .navbar .nav>li>a:hover {
+	color: #fff;
+}
+
+.navbar .dropdown-menu>li>a:hover {
+	background-color: #093697;
+	background-image: none;
 }
 
 .navbar .nav li.dropdown.open>.dropdown-toggle, .navbar .nav li.dropdown.active>.dropdown-toggle, .navbar .nav li.dropdown.open.active>.dropdown-toggle {
@@ -242,4 +257,18 @@ th {
 .table thead th {
 	background: #004383;
 	color: #fff;
+}
+
+.breadcumb.container  {
+	height: 40px;
+	border-bottom: 1px solid #ccc;
+}
+
+.breadcumb .titoloBreadcumb {
+	color: #005782;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+.breadcumb span {
+	line-height: 40px;
 }
