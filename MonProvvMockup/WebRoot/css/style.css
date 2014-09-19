@@ -219,13 +219,13 @@ th {
 	border-bottom-color: #FFF;
 }
 
-.dropdown-menu {
+.navbar .dropdown-menu {
 	background-color: #555;
 	margin-top: -1px;
 }
 
-.dropdown-menu:before,
-.dropdown-menu:after {
+.navbar .dropdown-menu:before,
+.navbar .dropdown-menu:after {
   display:none !important;
 }
 

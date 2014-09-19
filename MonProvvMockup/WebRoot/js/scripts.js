@@ -36,9 +36,16 @@ $(document).ready(function() {
     $("#nuovo").click(function() {
     	window.location.href = "inserimento.html";
     });
-    
+   
+    $("#modifica").click(function() {
+    	window.location.href = "modifica.html";
+    });
     
     $('#risultatiRicerca .table > tbody > tr').click(function() {
+    	window.location.href = "dettaglio.html";
+    });
+    
+    $("#salvaModifica").click(function() {
     	window.location.href = "dettaglio.html";
     });
     
@@ -106,6 +113,15 @@ $(document).ready(function() {
 	        $("#dp1v").val(ev.format('dd/mm/yyyy'));
         });
   
+ // INSERIMENTO
+    $("#dp2").datepicker({
+    	format: "dd/mm/yyyy",
+        todayBtn: "linked",
+        language: "it"
+    }).on('changeDate', function(ev){
+	        $("#dp2v").val(ev.format('dd/mm/yyyy'));
+        });
+    
 });
 
 
