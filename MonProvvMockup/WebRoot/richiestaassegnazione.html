@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Monitoraggio Provvedimenti - Mockup richiesta assegnazione provvedimento (inseritore/capofila)</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<link href="css/normalize.css" rel="stylesheet" />
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/font-awesome.min.css" rel="stylesheet" >
+	<link href="css/bootstrap-multiselect.css" rel="stylesheet" >
+	<link href="css/bootstrap-datepicker.css" rel="stylesheet" >
+	<link href="css/style.css" rel="stylesheet">
+
+	
+	
+
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+  <![endif]-->
+
+	<!-- Fav icons -->
+	<link rel="shortcut icon" href="favicon.ico" type="x-icon">
+	<link rel="icon" href="favicon.ico" type="x-icon">
+  
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap-multiselect.js"></script>
+	<script type="text/javascript" src="js/bootstrap-datepicker.js"></script>
+	<script type="text/javascript" src="js/locales/bootstrap-datepicker.it.js"></script>
+	<script type="text/javascript" src="js/scripts.js"></script>
+	
+</head>
+
+<body>
+	<div class="container header">
+		<div class="row" style="height: 100px" >
+			<div class="span8">
+				<h1 class="titolo">Monitoraggio Provvedimenti</h1>
+			</div>
+			<div class="span4">
+				<span class="utente">Utente: Mario Rossi (Ruolo Capofila) - <a id="popoverNotifiche" href="#">Hai 2 messaggi non letti</a> </span> 
+			</div>
+		</div>
+		<div class="row">
+			<div class="span12">
+				<div class="navbar navbar-custom">
+					<ul class="nav navbar-nav">
+						<li class="dropdown">
+					    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+					      Account
+					      <i class="icon-caret-down"></i>
+					    </a>
+					    <ul class="dropdown-menu">
+			      			<li><a href="#">Test</a></li>
+			    		</ul>
+			  		</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container inserimento">
+		<div class="row">
+			<div class="span12">
+				<h3 class="text-left underline"><span>Richiesta assegnazione</span></h3>
+			</div>
+		</div>
+		<form class="form-horizontal">
+			<div class="row">
+				<div class="span10 offset2 dettaglio">
+						<div class="control-group">
+							<label class="control-label">Provvedimento</label>
+							<div class="controls">
+								<span>LP 1</span>
+							</div>
+						</div>
+						<div class="control-group">
+							<label class="control-label">Titolo/Oggetto</label>
+							<div class="controls">
+								<span>Indicazioni per l'inserimento, da parte dei Comuni, degli elementi risultanti dalle deliberazioni di approvazione delle aliquote e delle detrazioni nell'apposita sezione del Portale del  federalismo  fiscale</span>
+							</div>
+						</div>
+						<div class="control-group">
+							<label class="control-label" for="art">Utente richiedente</label>
+							<div class="controls">
+								<span>Mario Viola</span>
+							</div>
+						</div>
+						<div class="control-group">
+							<label class="control-label" for="comma">Organo richiedente</label>
+							<div class="controls">
+								<span>RGS</span>
+							</div>
+						</div>
+						<div class="control-group">
+							<label class="control-label" for="provvDaAdottare">Motivazione richiesta</label>
+							<div class="controls">
+								<span>Voglio esprimere un parere!</span>
+							</div>
+						</div>
+				</div>
+			</div>
+		</form>
+		<div class="row">
+			<div class="span12">
+				<div class="form-horizontal">
+					<div class="control-group">
+						<div class="form-actions pull-right">
+							<button type="submit" class="btn btn-primary" id="salva">Accetta &nbsp;<i class="icon-ok"></i></button>
+							<button type="button" class="btn" id="annulla">Rifiuta &nbsp;<i class="icon-remove"></i></button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>		
+	</div>
+	
+</body>
+</html>

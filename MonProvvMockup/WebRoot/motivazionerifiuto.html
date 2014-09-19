@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Monitoraggio Provvedimenti - Mockup dettaglio provvedimento (inseritore/capofila)</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<link href="css/normalize.css" rel="stylesheet" />
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<!-- <link href="css/bootstrap-responsive.min.css" rel="stylesheet">  -->
+	<link href="css/font-awesome.min.css" rel="stylesheet" >
+	<link href="css/bootstrap-multiselect.css" rel="stylesheet" >
+	<link href="css/style.css" rel="stylesheet">
+
+	<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+	  <script src="js/html5shiv.js"></script>
+	<![endif]-->
+	
+	<!-- Fav icons -->
+	<link rel="shortcut icon" href="favicon.ico" type="x-icon">
+	<link rel="icon" href="favicon.ico" type="x-icon">
+	
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap-multiselect.js"></script>
+	<script type="text/javascript" src="js/scripts.js"></script>
+	
+</head>
+
+<body>
+	<div class="container header">
+		<div class="row" style="height: 100px" >
+			<div class="span8">
+				<h1 class="titolo">Monitoraggio Provvedimenti</h1>
+			</div>
+			<div class="span4">
+				<span class="utente">Utente: Mario Rossi (Ruolo Capofila) - <a id="popoverNotifiche" href="#">Hai 2 messaggi non letti</a> </span> 
+			</div>
+		</div>
+		<div class="row">
+			<div class="span12">
+				<div class="navbar navbar-custom">
+					<ul class="nav navbar-nav">
+						<li class="dropdown">
+					    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+					      Account
+					      <i class="icon-caret-down"></i>
+					    </a>
+					    <ul class="dropdown-menu">
+			      			<li><a href="#">Test</a></li>
+			    		</ul>
+			  		</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container inserimento">
+		<div class="row">
+			<div class="span12">
+				<h3 class="text-left underline"><span>Rifiuto assegnazione</span></h3>
+			</div>
+		</div>
+			<div class="row">
+				<div class="span10 offset2 dettaglio" >
+						<form class="form-horizontal" id="modalRifiuto">
+							<div class="control-group">
+								<label class="control-label" for="comma">Provvedimento</label>
+								<div class="controls">
+									<span>LP 2</span>
+								</div>
+							</div>
+							<div class="control-group">
+								<label class="control-label">Utente</label>
+								<div class="controls">
+									<span>Francesco Rossi</span>
+								</div>
+							</div>
+							<div class="control-group">
+								<label class="control-label">Assegnatario</label>
+								<div class="controls">
+									<span>Dip.to Tesoro</span>
+								</div>
+							</div>
+							<div class="control-group">
+								<label class="control-label" for="art">Motivazione</label>
+								<div class="controls">
+									<span>Il provvedimento non e' di nostra competenza</span>
+								</div>
+							</div>
+						</form>
+				</div>
+			</div>
+
+	</div>
+	
+<!-- fine finestra modale -->
+</body>
+</html>
