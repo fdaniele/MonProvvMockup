@@ -1,75 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<title>Monitoraggio Provvedimenti</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="">
-<meta name="author" content="">
-
-<!--link rel="stylesheet/less" href="less/bootstrap.less" type="text/css" /-->
-<!--link rel="stylesheet/less" href="less/responsive.less" type="text/css" /-->
-<!--script src="js/less-1.3.3.min.js"></script-->
-<!--append ‘#!watch’ to the browser URL, then refresh the page. -->
-
-
-<link href="css/bootstrap.min.css" rel="stylesheet">
-<link href="css/bootstrap-responsive.min.css" rel="stylesheet">
-<link rel="stylesheet" href="css/font-awesome.min.css">
-<link href="css/style.css" rel="stylesheet">
+	<meta charset="utf-8">
+	<title>Monitoraggio Provvedimenti - Inserimento Note e Allegati</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	
+	<!--link rel="stylesheet/less" href="less/bootstrap.less" type="text/css" /-->
+	<!--link rel="stylesheet/less" href="less/responsive.less" type="text/css" /-->
+	<!--script src="js/less-1.3.3.min.js"></script-->
+	<!--append ‘#!watch’ to the browser URL, then refresh the page. -->
 
 
+	<link href="css/normalize.css" rel="stylesheet" />
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/font-awesome.min.css" rel="stylesheet" >
+	<link href="css/bootstrap-multiselect.css" rel="stylesheet" >
+	<link href="css/bootstrap-datepicker.css" rel="stylesheet" >
+	<link href="css/style.css" rel="stylesheet">
 
-<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-<!--[if lt IE 9]>
+	
+	
+
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
   <![endif]-->
 
-<!-- Fav and touch icons -->
-<link rel="apple-touch-icon-precomposed" sizes="144x144"
-	href="img/apple-touch-icon-144-precomposed.png">
-<link rel="apple-touch-icon-precomposed" sizes="114x114"
-	href="img/apple-touch-icon-114-precomposed.png">
-<link rel="apple-touch-icon-precomposed" sizes="7large72"
-	href="img/apple-touch-icon-72-precomposed.png">
-<link rel="apple-touch-icon-precomposed"
-	href="img/apple-touch-icon-57-precomposed.png">
-<link rel="shortcut icon" href="img/favicon.png">
-
-<script type="text/javascript" src="js/jquery.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/scripts.js"></script>
+	<!-- Fav icons -->
+	<link rel="shortcut icon" href="favicon.ico" type="x-icon">
+	<link rel="icon" href="favicon.ico" type="x-icon">
+  
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap-multiselect.js"></script>
+	<script type="text/javascript" src="js/bootstrap-datepicker.js"></script>
+	<script type="text/javascript" src="js/locales/bootstrap-datepicker.it.js"></script>
+	<script type="text/javascript" src="js/scripts.js"></script>
 
 </head>
 
 <body>
-	<div class="inserimento">
-		<form class="form-horizontal">
-			<div class="row">
-				<div class="control-group">
-					<label class="control-label" for="inputEmail">Ente</label>
-					<div class="controls">
-						<input type="text" id="inputEmail" class="input-xlarge"
-							placeholder="Dip.to Tesoro" disabled>
-					</div>
+	<div class="container header">
+		<div class="row">
+			<div class="span7">
+				<h1 class="titolo">Monitoraggio Provvedimenti</h1>
+			</div>
+			<div class="span5">
+				<span class="utente">Utente: Mario Rossi (Ruolo Inseritore) - Agenzia Dogane e Monopoli - <a id="popoverNotifiche" href="#">Hai 2 messaggi non letti</a> </span> 
+			</div>
+		</div>
+		<div class="row">
+			<div class="span12">
+				<div class="navbar navbar-custom">
+					<ul class="nav navbar-nav">
+						<li class="dropdown">
+						    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+						      Provvedimenti
+						      <i class="icon-caret-down"></i>
+						    </a>
+						    <ul class="dropdown-menu">
+				      			<li><a href="#" id="vaiaricerca">Ricerca</a></li>
+				    		</ul>
+				  		</li>
+				  		<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+					</ul>
 				</div>
-				<div class="control-group">
-					<label class="control-label" for="art">Nota</label>
-					<div class="controls">
-						<textarea rows="3" class="input-xlarge"></textarea>
+			</div>
+		</div>
+	</div>
+	<div class="container breadcumb">
+		<div class="row">
+			<div class="span12">
+				<span class="titoloBreadcumb">Ti trovi in: </span><span>Provvedimenti &gt; Ricerca &gt; Dettaglio &gt; Note e allegati</span>
+			</div>
+		</div>
+	</div>
+	<div class="container inserimento">
+			<div class="row">
+				<div class="span12">
+					<h3 class="underline">
+							<span>Nota</span>
+					</h3>
+				</div>
+			</div>
+			<div class="row">
+				<div class="span10 offset2">
+					<div class="form-horizontal">
+						<div class="control-group">
+							<label class="control-label" for="inputEmail">Organo</label>
+							<div class="controls">
+								<span>Agenzia Dogane e Monopoli</span>
+							</div>
+						</div>
+						<div class="control-group">
+							<label class="control-label" for="art">Nota</label>
+							<div class="controls">
+								<textarea class="input-xxlarge" rows="5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</textarea>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
-			<div class="">
-				<div>
+			<div class="row">
+				<div class="span12">
 					<h3 class="text-left underline">
 						<span>Allegati</span>
 					</h3>
+				</div>
+			</div>
+			<div class="row">
+				<div class="span12">
 					<table class="table table-hover table-bordered" style="width: 100%">
 						<thead>
 							<tr>
 								<th>Id</th>
 								<th>Descrizione</th>
+								<th>Tipo</th>
 								<th>Dimensione</th>
 								<th class="center">Elimina</th>
 							</tr>
@@ -77,45 +125,52 @@
 						<tbody>
 							<tr>
 								<td>1</td>
-								<td class="vcenter">Documento per lorem ipsum...</td>
+								<td class="vcenter">Documento 1</td>
+								<td>PDF</td>
 								<td>200 kb</td>
-								<td class="vcenter"><i class="icon-trash icon-large gray"></i>
+								<td class="center"><i class="icon-trash icon-large gray"></i>
 								</td>
 							</tr>
 						</tbody>
 					</table>
 				</div>
 			</div>
-			<div class="control-group">
-				<label class="control-label" for="allegato">Nome file</label>
-				<div class="controls">
-					<input type="text" id="allegato" class="input-xlarge" />
-					<button type="button" id="insertEnte" class="btn">Sfoglia</button>
+			<div class="form-horizontal">
+				<div class="control-group">
+					<label class="control-label" for="allegato">File da allegare</label>
+					<div class="controls">
+						<input type="text" id="allegato" class="input-xlarge" />
+						<button type="button" id="insertEnte" class="btn">Sfoglia</button>
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label" for="descrizione">Descrizione</label>
+					<div class="controls">
+						<input type="text" id="descrizione" class="input-xxlarge" />
+					</div>
+				</div>
+				<div class="control-group">
+					<div class="controls">
+						<button type="button" id="insertEnte" class="btn">
+							Aggiungi <i class="icon-plus"></i>
+						</button>
+					</div>
 				</div>
 			</div>
-			<div class="control-group">
-				<label class="control-label" for="descrizione">Descrizione</label>
-				<div class="controls">
-					<textarea id="descrizione" class="input-xlarge" rows="3" ></textarea>
-					<!-- <input type="text" id="descrizione" class="input-xxlarge" /> -->
+			<div class="row">
+				<div class="span12">
+					<div class="form-horizontal">
+						<div class="control-group">
+							<div class="form-actions pull-right">
+								<button type="submit" class="btn btn-primary" id="salvaNote">Salva &nbsp;<i class="icon-save"></i></button>
+								<button type="button" class="btn" id="annullaNote">Annulla &nbsp;<i class="icon-undo"></i></button>
+							</div>
+						</div>
+					</div>
 				</div>
-			</div>
-			<div class="control-group text-center">
-					<button type="button" id="insertEnte" class="btn">
-						Aggiungi <i class="icon-plus"></i>
-					</button>
-			</div>
-			<div class="control-group">
-				<div class="form-actions">
-					<button type="submit" class="btn btn-primary">
-						Salva &nbsp;<i class="icon-search"></i>
-					</button>
-					<button type="button" class="btn" id="indietro">
-						Annulla &nbsp;<i class="icon-eraser"></i>
-					</button>
-				</div>
-			</div>
-		</form>
+			</div>		
+
+
 	</div>
 </body>
 </html>

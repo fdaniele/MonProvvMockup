@@ -24,7 +24,7 @@ $(document).ready(function() {
     });
     
     $("#indietro").click(function() {
-    	window.history.back();
+    	window.location.href = "index.html";
     });
     
     var risultatiRicerca = $("#risultatiRicerca");
@@ -42,15 +42,44 @@ $(document).ready(function() {
     	window.location.href = "modifica.html";
     });
     
-    $('#risultatiRicerca .table > tbody > tr').click(function() {
+    $('#risultatiRicerca .table > tbody > tr:eq(0)').click(function() {
     	window.location.href = "dettaglio.html";
     });
+    
+    $('#risultatiRicerca .table > tbody > tr:eq(1)').click(function() {
+    	window.location.href = "dettaglio_assegnatario.html";
+    });
+    
+    $('#risultatiRicerca .table > tbody > tr:eq(2)').click(function() {
+    	window.location.href = "dettaglio_non_assegnatario.html";
+    });
+    
     
     $("#salvaModifica").click(function() {
     	window.location.href = "dettaglio.html";
     });
     
     $("#vaiaricerca").click(function() {
+    	window.location.href = "index.html";
+    });
+    
+    $("#inserisciNote").click(function() {
+    	window.location.href = "inserimentoNoteAllegati.html";
+    });
+    
+    $("#salvaNote").click(function() {
+    	window.location.href = "dettaglio_assegnatario.html";
+    });
+    
+    $("#annullaNote").click(function() {
+    	window.location.href = "dettaglio_assegnatario.html";
+    });
+    
+    $("#rifiutoAssegnazione").click(function() {
+    	window.location.href = "index.html";
+    });
+    
+    $("#richiediAssegnazione").click(function() {
     	window.location.href = "index.html";
     });
     
