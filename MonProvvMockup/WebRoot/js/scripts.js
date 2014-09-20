@@ -1,8 +1,5 @@
 $(document).ready(function() {
-	
-	$("#header").load("index.html .header");
-	
-	
+
     $('.multiselect').multiselect({
             nonSelectedText: 'Tutti',
             numberDisplayed: 20
@@ -55,7 +52,7 @@ $(document).ready(function() {
     
     $("#vaiaricerca").click(function() {
     	window.location.href = "index.html";
-   });
+    });
     
     //Inserimento Enti Assegnatari
     
@@ -130,6 +127,14 @@ $(document).ready(function() {
 	        $("#dp2v").val(ev.format('dd/mm/yyyy'));
         });
     
+    
+    $('#modal').on('show', function () {
+        $(this).find('.modal-body').css({
+               width:'auto', //probably not needed
+               height:'auto', //probably not needed 
+               'max-height':'100%'     
+        });
+    });
 });
 
 
