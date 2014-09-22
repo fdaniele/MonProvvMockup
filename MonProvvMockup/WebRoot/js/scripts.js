@@ -35,9 +35,26 @@ $(document).ready(function() {
     });
     
     $("#nuovo").click(function() {
-    	window.location.href = "inserimento.html";
+    	window.location.href = "inserimento_step1.html";
     });
    
+    $("#avantiStep2").click(function() {
+    	window.location.href = "inserimento_step2.html";
+    });
+    
+    $("#avantiStep3").click(function() {
+    	window.location.href = "inserimento_step3.html";
+    });
+    
+    $("#indietroStep1").click(function() {
+    	window.location.href = "inserimento_step1.html";
+    });
+    
+    $("#indietroStep2").click(function() {
+    	window.location.href = "inserimento_step2.html";
+    });
+    
+    
     $("#modifica").click(function() {
     	window.location.href = "modifica.html";
     });
