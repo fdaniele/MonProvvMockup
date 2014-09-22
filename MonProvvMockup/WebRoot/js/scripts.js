@@ -1,5 +1,5 @@
 $(document).ready(function() {
-
+ 
     $('.multiselect').multiselect({
             nonSelectedText: 'Tutti',
             numberDisplayed: 20
@@ -28,7 +28,7 @@ $(document).ready(function() {
     });
     
     var risultatiRicerca = $("#risultatiRicerca");
-    risultatiRicerca.hide();
+    //risultatiRicerca.hide();
     
     $("#ricerca").click(function() {
          risultatiRicerca.show();
