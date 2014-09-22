@@ -79,88 +79,12 @@
 	<div class="container inserimento">
 		<div class="row">
 			<div class="span12">
-				<h3 class="text-left underline"><span>Inserimento provvedimento</span></h3>
+				<h3 class="text-left underline"><span>Nomina capofila provvedimento</span></h3>
 			</div>
 		</div>
 		<form class="form-horizontal">
 			<div class="row">
 				<div class="span10 offset2">
-						<div class="control-group">
-							<label class="control-label" for="governo">Governo</label>
-							<div class="controls">
-								<select id="governo" class="input-xlarge">
-									<option>Sceglierne uno...</option>
-									<option>Monti</option>
-									<option>Letta</option>
-									<option>Renzi</option>
-								</select>
-							</div>
-						</div>
-				
-						<div class="control-group">
-							<label class="control-label" for="statoDiAttuazione">Tipologia</label>
-							<div class="controls">
-								<select id="statoDiAttuazione" class="input-xlarge">
-									<option>Sceglierne uno...</option>
-									<option>Proponente MEF</option>
-									<option>Concertante MEF</option>
-								</select>
-							</div>
-						</div>
-						<div class="control-group">
-							<label class="control-label" for="inputEmail">Fonte
-								normativa</label>
-							<div class="controls">
-								<input type="text" id="inputEmail" class="input-xlarge">
-							</div>
-						</div>
-						<div class="control-group">
-							<label class="control-label" for="art">Art.</label>
-							<div class="controls">
-								<input type="text" id="art" class="input-xlarge">
-							</div>
-						</div>
-						<div class="control-group">
-							<label class="control-label" for="comma">Comma</label>
-							<div class="controls">
-								<input type="text" id="comma" class="input-xlarge">
-							</div>
-						</div>
-						<div class="control-group">
-							<label class="control-label" for="provvDaAdottare">Provvedimento da adottare</label>
-							<div class="controls">
-								<select id="provvDaAdottare" class="span3">
-									<option>Sceglierne uno...</option>
-									<option>Altro</option>
-									<option>Convenzione</option>
-									<option>D.I.</option>
-									<option>D.M. </option>
-									<option>Decreto direttoriale</option>
-									<option>dPCM  </option>
-									<option>DPR (regolamento delegificazione)</option>
-								</select>
-							</div>
-						</div>
-						<div class="control-group">
-							<label class="control-label" for="titoloOggetto">Titolo /
-								Oggetto</label>
-							<div class="controls">
-								<textarea id="titoloOggetto" class="input-xlarge" cols="30" rows="4" ></textarea>
-							</div>
-						</div>
-						<div class="control-group">
-							<label class="control-label" for="titoloOggetto">Termine di scadenza</label>
-							<div class="controls">
-								<input type="text" id="dp1v" class="input-xlarge" placeholder="Formato: gg/mm/aaaa"></input>&nbsp;<i class="icon-calendar icon-large" id="dp1"></i>
-							</div>
-						</div>
-						<div class="control-group">
-							<label class="control-label" for="statoDiAttuazione">Stato
-								di attuazione</label>
-							<div class="controls">
-								<span>Inserito</span>
-							</div>
-						</div>
 						<div class="control-group">
 							<label class="control-label" for="enteCapofila">Capofila (DD)</label>
 							<div class="controls">
@@ -171,7 +95,7 @@
 									<option>Ag. Dogane e Monopoli                                                                                                        </option>
 									<option>Ag. Entrate                                                                                                                  </option>
 									<option>Ag. Territorio                                                                                                               </option>
-									<option>Agenzia Dogane e Monopoli                                                                                                    </option>
+									<option selected>Agenzia Dogane e Monopoli                                                                                                    </option>
 									<option>Agenzia Entrate                                                                                                              </option>
 									<option>Agenzia Entrate/Guardia di finanza                                                                                           </option>
 									<option>Dipartimento finanze (DLTFF)                                                                                                 </option>
@@ -215,7 +139,7 @@
 									<option>Ag. Dogane e Monopoli                                                                                                        </option>
 									<option>Ag. Entrate                                                                                                                  </option>
 									<option>Ag. Territorio                                                                                                               </option>
-									<option>Agenzia Dogane e Monopoli                                                                                                    </option>
+									<option selected>Agenzia Dogane e Monopoli                                                                                                    </option>
 									<option>Agenzia Entrate                                                                                                              </option>
 									<option>Agenzia Entrate/Guardia di finanza                                                                                           </option>
 									<option>Dipartimento finanze (DLTFF)                                                                                                 </option>
@@ -248,87 +172,6 @@
 								</select>
 							</div>
 						</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="span12">
-					<h3 class="text-left underline"><span>Assegnatari</span></h3>
-				</div>
-			</div>
-			<div class="row">
-				<div class="span12">
-					<table class="table table-hover table-bordered">
-						<thead>
-							<tr>
-								<th style="width: 80%">
-									Organo
-								</th>
-								<th class="center">
-									Elimina
-								</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr id="assegnatarioDipTesoro">
-								<td style="width: 80%">
-									Dip.to Tesoro
-								</td>			
-								
-								<td class="vcenter center">
-									<a href="#" id="deleteEnte"><i class="icon-trash icon-large"></i></a>
-								</td>
-							</tr>
-							<tr id="noRecord">
-								<td colspan="2" class="vcenter">
-									Nessun record trovato.
-								</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-				<div class="control-group">
-					<label class="control-label" for="enteAssegnatario">Nuova assegnazione</label>
-					<div class="controls">
-						<select id="enteAssegnatario" class="span3">
-									<option>Sceglierne uno...</option>
-									<option>(RGS) su proposta del MAE di concerto con Min.affari europei                                                                 </option>  
-									<option>Agenzia Entrate e Territorio                                                                                                 </option>
-									<option>Ag. Dogane e Monopoli                                                                                                        </option>
-									<option>Ag. Entrate                                                                                                                  </option>
-									<option>Ag. Territorio                                                                                                               </option>
-									<option>Agenzia Dogane e Monopoli                                                                                                    </option>
-									<option>Agenzia Entrate                                                                                                              </option>
-									<option>Agenzia Entrate/Guardia di finanza                                                                                           </option>
-									<option>Dipartimento finanze (DLTFF)                                                                                                 </option>
-									<option>Dip.to Tesoro                                                                                                                </option>
-									<option>Dogane e monopoli                                                                                                            </option>
-									<option>dPCM su proposta del MEF (Dipto finanze DLTFF) di concerto con il Min.Interno                                                </option>
-									<option>dPCM su proposta MEF (Dipto finanze - DLTFF, RGS)  previo parere delle Commissioni parlamentari competenti per materia       </option>
-									<option>dPCM su proposta MEF (Dipto finanze) di concerto Ministro della giustizia sentito il Consiglio Nazionale Notariato           </option>
-									<option>dPCM su proposta MEF (RGS e Dipto tesoro)   di concerto Min.Coesione territoriale                                            </option>
-									<option>Interno e Giustizia                                                                                                          </option>
-									<option>MEF (Dipto finanze Ag.Dogane, RGS) di concerto MISE                                                                          </option>
-									<option>MEF (Dipto finanze) di concerto Coesione territoriale, Affari regionali e MISE                                               </option>
-									<option>MEF (Dipto finanze) d'intesa con Agenzia Entrate e ISTAT                                                                     </option>
-									<option>MEF (Dipto finanze) Interno sentita la Conf. Stato Città                                                                     </option>
-									<option>MEF (Dipto finanze) sentita l’Agenzia per l’Italia digitale                                                                  </option>
-									<option>MEF (Dipto finanze, Ag.entrate e Equitalia) di concerto MISE                                                                 </option>
-									<option>MEF (Dipto finanze, Ag.entrate) di concerto MISE e MIBACT                                                                    </option>
-									<option>MEF (Dipto finanze, RGS) di concerto Min.Interno    sentita la Conf. Sato città                                              </option>
-									<option>MEF (Dipto finanze-RGS) di concerto Sviluppo Economico                                                                       </option>
-									<option>MEF (Dipto tesoro) sentita la Banca d'Italia                                                                                 </option>
-									<option>MEF (Dipto tesoro)di concerto MISE                                                                                           </option>
-									<option>MEF (RGS)  Conf. Stato-Regioni e prov. Autonome (intesa)                                                                     </option>
-									<option>MEF (RGS) di concerto Coesione territoriale, Affari regionali e MISE                                                         </option>
-									<option>MEF (RGS) Istruzione, università e ricerca / Infrastrutture e Trasporti                                                      </option>
-									<option>MEF (RGS) sentita l'Agenzia Italia Digitale                                                                                  </option>
-									<option>MEF (RGS) su proposta del''Agenzia per l'Italia digitale                                                                     </option>
-									<option>MEF (RGS, Dipto tesoro) d'intesa Lavoro e Politiche Sociali /MISE                                                            </option>
-									<option>Ragioniere generale di concerto con Direttore Ag. Entrate                                                                    </option>
-									<option>RGS                                                                                                                          </option>
-						</select>
-						<button type="button" id="insertEnte" class="btn">Aggiungi &nbsp;<i class="icon-plus"></i></button>
-					</div>
 				</div>
 			</div>
 		</form>
