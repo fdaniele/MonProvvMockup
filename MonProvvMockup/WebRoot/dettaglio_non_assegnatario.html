@@ -130,31 +130,23 @@
 							</div>
 						</div>
 						<div class="control-group">
-							<label class="control-label" for="statoDiAttuazioneDettaglio">Stato
+							<label class="control-label" for="statoDiAttuazione">Stato
 								di attuazione</label>
 							<div class="controls">
-								<select id="statoDiAttuazioneDettaglio" class="input-xlarge">
-									<option>Inserito</option>
-									<option>Sospeso</option>
-									<option selected>Fine lavorazione</option>
-									<option>Chiusura lavori</option>
-									<option>Adottato</option>
-									<option>Non attuabile</option>
-									<option>Superato</option>
-								</select>
+								<span>Inserito</span>
 							</div>
 						</div>
 						<div class="control-group">
 							<label class="control-label" for="enteCapofila">Capofila (DD)</label>
 							<div class="controls">
-								<span>Agenzia Dogane e Monopoli</span>
+								<span>Dip.to Tesoro</span>
 							</div>
 						</div>
 						<div class="control-group">
 							<label class="control-label" for="proponente">Proponente
 								(DD)</label>
 							<div class="controls">
-								<span>Agenzia Dogane e Monopoli</span>
+								<span>Dip.to Tesoro</span>
 							</div>
 						</div>
 						<div class="control-group">
@@ -229,46 +221,33 @@
 								<th>
 									Cronologia Modifiche
 								</th>
-								<th class="center">
-									Elimina
-								</th>								
-								<th class="center">
-									Sollecito
-								</th>
 							</tr>
 						</thead>
 						<tbody>
 							<tr>
 								<td class="vcenter">
-									Ag. Territorio 
+									Agenzia Territorio 
 								</td>
 								<td class="vcenter center">
 									<i class="icon-check icon-large"></i>
 								</td>
 								<td>
-									Documento 1 (PDF - 1Mb)<br>
-									Documento 2 (Excel - 350Kb)<br>
-									Documento 3 (Testo - 1Kb) <br>
+									Delibera 1 (PDF - 350Kb)<br>
+									Allegato 2 (PDF - 5Mb)<br>
 								</td>
 								<td>
 									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 								</td>
 								<td class="vcenter center">
-									<a href="#modalCronologia" role="button" data-toggle="modal"><i class="icon-time icon-large"></i></a>
+									<a href="#myModal" role="button" data-toggle="modal"><i class="icon-time icon-large"></i></a>
 								</td>	
-								<td class="vcenter center">
-									<i class="icon-trash icon-large gray"></i>
-								</td>
-								<td class="vcenter center">
-									<a href="#modalSollecito" role="button" data-toggle="modal"><i class="icon-envelope-alt icon-large" title="Invio sollecito"></i></a>
-								</td>
 							</tr>
  							<tr>
 								<td>
-									MEF (Dipto finanze)  
+									RGS  
 								</td>
 								<td class="vcenter center">
-									<a href="#" id="popoverRifiuto"><i class="icon-remove-sign icon-large" title="Assegnazione rifiutata"></i>&nbsp;Motivazione rifiuto</a>
+									<a href="#" id="popoverRifiuto"><i class="icon-remove-sign icon-large"></i>&nbsp;Motivazione</a>
 								</td>
 								<td>
 								</td>
@@ -276,14 +255,8 @@
 									
 								</td>
 								<td class="vcenter center">
-									<a href="#modalCronologia" data-toggle="modal"><i class="icon-time icon-large" title="Apri cronologia"></i></a>
-								</td>	
-								<td class="vcenter center">
-									<i class="icon-trash icon-large" title="Elimina assegnazione"></i>
-								</td>
-								<td class="vcenter center">
-									<a href="#modalSollecito" role="button" data-toggle="modal"><i class="icon-envelope-alt icon-large" title="Invio sollecito"></i></a>
-								</td>															
+									<a href="#myModal" role="button" data-toggle="modal"><i class="icon-time icon-large"></i></a>
+								</td>								
 							</tr>
 							<tr id="assegnatarioDipTesoro">
 								<td class="vcenter">
@@ -300,60 +273,10 @@
 								</td>
 								<td class="vcenter center">
 									<a href="#myModal" role="button" data-toggle="modal"><i class="icon-time icon-large"></i></a>
-								</td>
-								<td class="vcenter center">
-									<a href="#" id="deleteEnte"><i class="icon-trash icon-large" title="Elimina assegnazione"></i></a>
-								</td>
-								<td class="vcenter center">
-									<a href="#modalSollecito" role="button" data-toggle="modal"><i class="icon-envelope-alt icon-large" title="Invio sollecito"></i></a>
-								</td>	
+								</td>									
 							</tr>
 						</tbody>
 					</table>
-				</div>
-				<div class="control-group">
-					<label class="control-label" for="enteAssegnatario">Nuovo assegnatario</label>
-					<div class="controls">
-						<select id="enteAssegnatario" class="span3">
-									<option>Sceglierne uno...</option>
-									<option>(RGS) su proposta del MAE di concerto con Min.affari europei                                                                 </option>  
-									<option>Agenzia Entrate e Territorio                                                                                                 </option>
-									<option>Ag. Dogane e Monopoli                                                                                                        </option>
-									<option>Ag. Entrate                                                                                                                  </option>
-									<option>Ag. Territorio                                                                                                               </option>
-									<option>Agenzia Dogane e Monopoli                                                                                                    </option>
-									<option>Agenzia Entrate                                                                                                              </option>
-									<option>Agenzia Entrate/Guardia di finanza                                                                                           </option>
-									<option>Dipartimento finanze (DLTFF)                                                                                                 </option>
-									<option>Dip.to Tesoro                                                                                                                </option>
-									<option>Dogane e monopoli                                                                                                            </option>
-									<option>dPCM su proposta del MEF (Dipto finanze DLTFF) di concerto con il Min.Interno                                                </option>
-									<option>dPCM su proposta MEF (Dipto finanze - DLTFF, RGS)  previo parere delle Commissioni parlamentari competenti per materia       </option>
-									<option>dPCM su proposta MEF (Dipto finanze) di concerto Ministro della giustizia sentito il Consiglio Nazionale Notariato           </option>
-									<option>dPCM su proposta MEF (RGS e Dipto tesoro)   di concerto Min.Coesione territoriale                                            </option>
-									<option>Interno e Giustizia                                                                                                          </option>
-									<option>MEF (Dipto finanze Ag.Dogane, RGS) di concerto MISE                                                                          </option>
-									<option>MEF (Dipto finanze) di concerto Coesione territoriale, Affari regionali e MISE                                               </option>
-									<option>MEF (Dipto finanze) d'intesa con Agenzia Entrate e ISTAT                                                                     </option>
-									<option>MEF (Dipto finanze) Interno sentita la Conf. Stato Città                                                                     </option>
-									<option>MEF (Dipto finanze) sentita l’Agenzia per l’Italia digitale                                                                  </option>
-									<option>MEF (Dipto finanze, Ag.entrate e Equitalia) di concerto MISE                                                                 </option>
-									<option>MEF (Dipto finanze, Ag.entrate) di concerto MISE e MIBACT                                                                    </option>
-									<option>MEF (Dipto finanze, RGS) di concerto Min.Interno    sentita la Conf. Sato città                                              </option>
-									<option>MEF (Dipto finanze-RGS) di concerto Sviluppo Economico                                                                       </option>
-									<option>MEF (Dipto tesoro) sentita la Banca d'Italia                                                                                 </option>
-									<option>MEF (Dipto tesoro)di concerto MISE                                                                                           </option>
-									<option>MEF (RGS)  Conf. Stato-Regioni e prov. Autonome (intesa)                                                                     </option>
-									<option>MEF (RGS) di concerto Coesione territoriale, Affari regionali e MISE                                                         </option>
-									<option>MEF (RGS) Istruzione, università e ricerca / Infrastrutture e Trasporti                                                      </option>
-									<option>MEF (RGS) sentita l'Agenzia Italia Digitale                                                                                  </option>
-									<option>MEF (RGS) su proposta del''Agenzia per l'Italia digitale                                                                     </option>
-									<option>MEF (RGS, Dipto tesoro) d'intesa Lavoro e Politiche Sociali /MISE                                                            </option>
-									<option>Ragioniere generale di concerto con Direttore Ag. Entrate                                                                    </option>
-									<option>RGS                                                                                                                          </option>
-						</select>
-						<button type="button" id="insertEnte" class="btn">Aggiungi &nbsp;<i class="icon-plus"></i></button>
-					</div>
 				</div>
 			</div>
 		</form>
@@ -362,20 +285,19 @@
 				<div class="form-horizontal">
 					<div class="control-group">
 						<div class="form-actions pull-right">
-							<button type="submit" class="btn btn-primary" id="salva">Salva &nbsp;<i class="icon-save"></i></button>
-							<button type="button" class="btn" id="annulla">Annulla &nbsp;<i class="icon-undo"></i></button>
-							<button type="submit" class="btn" id="modifica">Modifica &nbsp;<i class="icon-edit"></i></button>
+							<button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#modalRichiedi">Richiedi assegnazione &nbsp;<i class="icon-check"></i></button>
+							<button type="button" class="btn" id="indietro">Indietro &nbsp;<i class="icon-arrow-left"></i></button>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
+		</div>		
 	</div>
 	
 	
 <!--  finestra modale -->
  
-	<div id="modalCronologia" class="modal hide fade" tabindex="-1" role="dialog"
+	<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog"
 		aria-labelledby="myModalLabel" aria-hidden="true">
 		<div class="modal-header">
 			<button type="button" class="close" data-dismiss="modal"
@@ -396,7 +318,7 @@
 					<tr>
 						<td>09-08-2014 09:37</td>
 						<td>Inserimento nota</td>
-						<td>Agenzia Dogane e monopoli</td>
+						<td>Dogane e monopoli</td>
 						<td>Marco Iezzi</td>
 					</tr>
 					<tr>
@@ -430,56 +352,20 @@
 			<button class="btn" data-dismiss="modal" aria-hidden="true">Chiudi</button>
 		</div>
 	</div>
-	
-	
-	<div id="modalSalvaInviaNotifica" class="modal hide fade" tabindex="-1" role="dialog"
-		aria-labelledby="myModalLabel" aria-hidden="true">
-		<div class="modal-header">
-			<button type="button" class="close" data-dismiss="modal"
-				aria-hidden="true">×</button>
-			<h3 id="myModalLabel">Invia notifica</h3>
-		</div>
-		<div class="modal-body">
-			<div class="form-horizontal">
-				<div class="control-group">
-					<label class="control-label" for="email">Email</label>
-					<div class="controls">
-						<input type="text" class="input-xlarge" id="email"></input>
-					</div>
-				</div>
-				<div class="control-group">
-					<label class="control-label" for="oggetto">Oggetto</label>
-					<div class="controls">
-						<input type="text" class="input-xlarge" id="oggetto"></input>
-					</div>
-				</div>
-				<div class="control-group">
-					<label class="control-label" for="art">Testo</label>
-					<div class="controls">
-						<textarea class="input-xlarge" rows="10"></textarea>
-					</div>
-				</div>
-			</div>
-
-		</div>
-		<div class="modal-footer">
-			<button class="btn" data-dismiss="modal" aria-hidden="true" id="inviaNotifica">Invia notifica <i class="icon-send"></i></button>
-		</div>
-	</div>
 <!-- fine finestra modale -->
 
-<!--  modal invio sollecito  -->
-	<div id="modalSollecito" class="modal hide fade" tabindex="-1" role="dialog"
+<!--  modal rifiuta assegnazione  -->
+	<div id="modalRichiedi" class="modal hide fade" tabindex="-1" role="dialog"
 		aria-labelledby="myModalLabel" aria-hidden="true">
 		<div class="modal-header">
 			<button type="button" class="close" data-dismiss="modal"
 				aria-hidden="true">×</button>
-			<h3 id="myModalLabel">Invio sollecito</h3>
+			<h3 id="myModalLabel">Richiesta assegnazione</h3>
 		</div>
 		<div class="modal-body">
 			<div class="form-horizontal">
 				<div class="control-group">
-					<label class="control-label" for="art">Testo</label>
+					<label class="control-label" for="art">Motivazione</label>
 					<div class="controls">
 						<textarea class="input-xlarge" rows="10"></textarea>
 					</div>
@@ -488,7 +374,62 @@
 
 		</div>
 		<div class="modal-footer">
-			<button class="btn" data-dismiss="modal" aria-hidden="true" id="richiediAssegnazione">Invia &nbsp;<i class="icon-location-arrow"></i></button>
+			<button class="btn" data-dismiss="modal" aria-hidden="true" id="richiediAssegnazione">Richiedi <i class="icon-check"></i></button>
+		</div>
+	</div>
+	
+	<!--  modal allegati provvedimento  -->
+	<div id="modalAllegatiProvvedimento" class="modal hide fade" tabindex="-1" role="dialog"
+		aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal"
+				aria-hidden="true">×</button>
+			<h3 id="myModalLabel">Allegati provvedimento</h3>
+		</div>
+		<div class="modal-body">
+			<div class="form-horizontal">
+				<div class="control-group">
+					<label class="control-label" for="inputEmail">Ente</label>
+					<div class="controls">
+						<input type="text" id="inputEmail" class="input-xlarge"
+							placeholder="Dip.to Tesoro" disabled>
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label" for="art">Nota</label>
+					<div class="controls">
+						<textarea rows="3" class="input-xlarge">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt</textarea>
+					</div>
+				</div>
+			</div>
+			<div class="">
+				<div>
+					<h3 class="text-left underline">
+						<span>Allegati</span>
+					</h3>
+					<table class="table table-hover table-bordered" style="width: 100%">
+						<thead>
+							<tr>
+								<th>Id</th>
+								<th>Descrizione</th>
+								<th>Dimensione</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td class="vcenter">Documento 1 (PDF)</td>
+								<td>200 kb</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td class="vcenter">Documento 2 (Excel)</td>
+								<td>350Kb</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
 		</div>
 	</div>
 </body>

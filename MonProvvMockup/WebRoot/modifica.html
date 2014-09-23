@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Monitoraggio Provvedimenti - Modifica provvedimento (inseritore/capofila)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+	<link href="css/normalize.css" rel="stylesheet" />
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/font-awesome.min.css" rel="stylesheet" >
+	<link href="css/bootstrap-multiselect.css" rel="stylesheet" >
+	<link href="css/bootstrap-datepicker.css" rel="stylesheet" >
+	<link href="css/style.css" rel="stylesheet">
+ 
+	
+	
+
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+  <![endif]-->
+
+	<!-- Fav icons -->
+	<link rel="shortcut icon" href="favicon.ico" type="x-icon">
+	<link rel="icon" href="favicon.ico" type="x-icon">
+  
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap-multiselect.js"></script>
+	<script type="text/javascript" src="js/bootstrap-datepicker.js"></script>
+	<script type="text/javascript" src="js/locales/bootstrap-datepicker.it.js"></script>
+	<script type="text/javascript" src="js/scripts.js"></script>
+	
+</head>
+
+<body>
+	<div class="container header">
+		<div class="row">
+			<div class="span7">
+				<h1 class="titolo">Monitoraggio Provvedimenti</h1>
+			</div>
+			<div class="span5">
+				<span class="utente">Utente: Mario Rossi (Ruolo Inseritore) - Agenzia Dogane e Monopoli - <a id="popoverNotifiche" href="#">Hai 2 messaggi non letti</a> </span> 
+			</div>
+		</div>
+		<div class="row">
+			<div class="span12">
+				<div class="navbar navbar-inner navbar-custom">
+					<ul class="nav navbar-nav">
+						<li class="dropdown">
+						    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+						      Provvedimenti
+						      <i class="icon-caret-down"></i>
+						    </a>
+						    <ul class="dropdown-menu">
+				      			<li><a href="#" id="vaiaricerca">Ricerca</a></li>
+				    		</ul>
+				  		</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container breadcumb">
+		<div class="row">
+			<div class="span12">
+				<span class="titoloBreadcumb">Ti trovi in: </span><span>Provvedimenti &gt; Ricerca &gt; Dettaglio &gt; Aggiornamento</span>
+			</div>
+		</div>
+	</div>
+
+	<div class="container inserimento">
+		<div class="row">
+			<div class="span12">
+				<h3 class="text-left underline"><span>Modifica provvedimento</span></h3>
+			</div>
+		</div>
+		<form class="form-horizontal">
+			<div class="row">
+				<div class="span10 offset2">
+						<div class="control-group">
+							<label class="control-label" for="governo">Governo</label>
+							<div class="controls">
+								<select id="governo" class="input-xlarge">
+									<option>Sceglierne uno...</option>
+									<option>Monti</option>
+									<option selected>Letta</option>
+									<option>Renzi</option>
+								</select>
+							</div>
+						</div>
+				
+						<div class="control-group">
+							<label class="control-label" for="statoDiAttuazione">Tipologia</label>
+							<div class="controls">
+								<select id="statoDiAttuazione" class="input-xlarge">
+									<option>Sceglierne uno...</option>
+									<option selected>Proponente MEF</option>
+									<option>Concertante MEF</option>
+									<option>Concerto preventivo</option>
+								</select>
+							</div>
+						</div>
+						<div class="control-group">
+							<label class="control-label" for="inputEmail">Fonte
+								normativa</label>
+							<div class="controls">
+								<input type="text" id="inputEmail" class="input-xlarge" value="D.L. 145/2013 conv. Legge 9/2014">
+							</div>
+						</div>
+						<div class="control-group">
+							<label class="control-label" for="art">Art.</label>
+							<div class="controls">
+								<input type="text" id="art" class="input-xlarge" value="2">
+							</div>
+						</div>
+						<div class="control-group">
+							<label class="control-label" for="comma">Comma</label>
+							<div class="controls">
+								<input type="text" id="comma" class="input-xlarge" value="1 lett. h)">
+							</div>
+						</div>
+						<div class="control-group">
+							<label class="control-label" for="provvDaAdottare">Provvedimento da adottare</label>
+							<div class="controls">
+								<select id="provvDaAdottare" class="span3">
+									<option>Sceglierne uno...</option>
+									<option>Altro</option>
+									<option>Convenzione</option>
+									<option selected>D.I.</option>
+									<option>D.M. </option>
+									<option>Decreto direttoriale</option>
+									<option>dPCM  </option>
+									<option>DPR (regolamento delegificazione)</option>
+								</select>
+							</div>
+						</div>
+						<div class="control-group">
+							<label class="control-label" for="titoloOggetto">Titolo /
+								Oggetto</label>
+							<div class="controls">
+								<textarea id="titoloOggetto" class="input-xlarge" cols="30" rows="4" >Definizione criteri e modalità di concessione aevolazioni in favore della nuova imprenditorialità nei settori dei beni e dell'erogazione dei servizi</textarea>
+							</div>
+						</div>
+						<div class="control-group">
+							<label class="control-label" for="titoloOggetto">Termine di scadenza</label>
+							<div class="controls">
+								<input type="text" id="dp1v" class="input-xlarge" placeholder="Formato: gg/mm/aaaa" value="21/01/2014"></input>&nbsp;<i class="icon-calendar icon-large" id="dp1"></i>
+							</div>
+						</div>
+						<div class="control-group">
+							<label class="control-label" for="statoDiAttuazione">Stato
+								di attuazione</label>
+							<div class="controls">
+								<select id="statoDiAttuazione" class="input-xlarge">
+									<option>Inserito</option>
+									<option>Sospeso</option>
+									<option selected>Fine lavorazione</option>
+									<option>Chiusura lavori</option>
+									<option>Adottato</option>
+									<option>Non attuabile</option>
+									<option>Superato</option>
+								</select>
+							</div>
+						</div>
+						<div class="control-group">
+							<label class="control-label" for="enteCapofila">Capofila (DD)</label>
+							<div class="controls">
+								<select id="enteCapoFila" class="input-xlarge">
+									<option>Sceglierne uno...</option>
+									<option>(RGS) su proposta del MAE di concerto con Min.affari europei                                                                 </option>  
+									<option>Agenzia Entrate e Territorio                                                                                                 </option>
+									<option>Ag. Dogane e Monopoli                                                                                                        </option>
+									<option>Ag. Entrate                                                                                                                  </option>
+									<option>Ag. Territorio                                                                                                               </option>
+									<option selected>Agenzia Dogane e Monopoli                                                                                                    </option>
+									<option>Agenzia Entrate                                                                                                              </option>
+									<option>Agenzia Entrate/Guardia di finanza                                                                                           </option>
+									<option>Dipartimento finanze (DLTFF)                                                                                                 </option>
+									<option>Dip.to Tesoro                                                                                                                </option>
+									<option>Dogane e monopoli                                                                                                            </option>
+									<option>dPCM su proposta del MEF (Dipto finanze DLTFF) di concerto con il Min.Interno                                                </option>
+									<option>dPCM su proposta MEF (Dipto finanze - DLTFF, RGS)  previo parere delle Commissioni parlamentari competenti per materia       </option>
+									<option>dPCM su proposta MEF (Dipto finanze) di concerto Ministro della giustizia sentito il Consiglio Nazionale Notariato           </option>
+									<option>dPCM su proposta MEF (RGS e Dipto tesoro)   di concerto Min.Coesione territoriale                                            </option>
+									<option>Interno e Giustizia                                                                                                          </option>
+									<option>MEF (Dipto finanze Ag.Dogane, RGS) di concerto MISE                                                                          </option>
+									<option>MEF (Dipto finanze) di concerto Coesione territoriale, Affari regionali e MISE                                               </option>
+									<option>MEF (Dipto finanze) d'intesa con Agenzia Entrate e ISTAT                                                                     </option>
+									<option>MEF (Dipto finanze) Interno sentita la Conf. Stato Città                                                                     </option>
+									<option>MEF (Dipto finanze) sentita l’Agenzia per l’Italia digitale                                                                  </option>
+									<option>MEF (Dipto finanze, Ag.entrate e Equitalia) di concerto MISE                                                                 </option>
+									<option>MEF (Dipto finanze, Ag.entrate) di concerto MISE e MIBACT                                                                    </option>
+									<option>MEF (Dipto finanze, RGS) di concerto Min.Interno    sentita la Conf. Sato città                                              </option>
+									<option>MEF (Dipto finanze-RGS) di concerto Sviluppo Economico                                                                       </option>
+									<option>MEF (Dipto tesoro) sentita la Banca d'Italia                                                                                 </option>
+									<option>MEF (Dipto tesoro)di concerto MISE                                                                                           </option>
+									<option>MEF (RGS)  Conf. Stato-Regioni e prov. Autonome (intesa)                                                                     </option>
+									<option>MEF (RGS) di concerto Coesione territoriale, Affari regionali e MISE                                                         </option>
+									<option>MEF (RGS) Istruzione, università e ricerca / Infrastrutture e Trasporti                                                      </option>
+									<option>MEF (RGS) sentita l'Agenzia Italia Digitale                                                                                  </option>
+									<option>MEF (RGS) su proposta del''Agenzia per l'Italia digitale                                                                     </option>
+									<option>MEF (RGS, Dipto tesoro) d'intesa Lavoro e Politiche Sociali /MISE                                                            </option>
+									<option>Ragioniere generale di concerto con Direttore Ag. Entrate                                                                    </option>
+									<option>RGS                                                                                                                          </option>
+								</select>
+							</div>
+						</div>
+						<div class="control-group" id="proponenteDiv">
+							<label class="control-label" for="proponente">Proponente
+								(DD)</label>
+							<div class="controls">
+								<select id="proponente" class="input-xlarge">
+									<option>Sceglierne uno...</option>
+									<option>(RGS) su proposta del MAE di concerto con Min.affari europei                                                                 </option>  
+									<option>Agenzia Entrate e Territorio                                                                                                 </option>
+									<option>Ag. Dogane e Monopoli                                                                                                        </option>
+									<option>Ag. Entrate                                                                                                                  </option>
+									<option>Ag. Territorio                                                                                                               </option>
+									<option selected>Agenzia Dogane e Monopoli                                                                                                    </option>
+									<option>Agenzia Entrate                                                                                                              </option>
+									<option>Agenzia Entrate/Guardia di finanza                                                                                           </option>
+									<option>Dipartimento finanze (DLTFF)                                                                                                 </option>
+									<option>Dip.to Tesoro                                                                                                                </option>
+									<option>Dogane e monopoli                                                                                                            </option>
+									<option>dPCM su proposta del MEF (Dipto finanze DLTFF) di concerto con il Min.Interno                                                </option>
+									<option>dPCM su proposta MEF (Dipto finanze - DLTFF, RGS)  previo parere delle Commissioni parlamentari competenti per materia       </option>
+									<option>dPCM su proposta MEF (Dipto finanze) di concerto Ministro della giustizia sentito il Consiglio Nazionale Notariato           </option>
+									<option>dPCM su proposta MEF (RGS e Dipto tesoro)   di concerto Min.Coesione territoriale                                            </option>
+									<option>Interno e Giustizia                                                                                                          </option>
+									<option>MEF (Dipto finanze Ag.Dogane, RGS) di concerto MISE                                                                          </option>
+									<option>MEF (Dipto finanze) di concerto Coesione territoriale, Affari regionali e MISE                                               </option>
+									<option>MEF (Dipto finanze) d'intesa con Agenzia Entrate e ISTAT                                                                     </option>
+									<option>MEF (Dipto finanze) Interno sentita la Conf. Stato Città                                                                     </option>
+									<option>MEF (Dipto finanze) sentita l’Agenzia per l’Italia digitale                                                                  </option>
+									<option>MEF (Dipto finanze, Ag.entrate e Equitalia) di concerto MISE                                                                 </option>
+									<option>MEF (Dipto finanze, Ag.entrate) di concerto MISE e MIBACT                                                                    </option>
+									<option>MEF (Dipto finanze, RGS) di concerto Min.Interno    sentita la Conf. Sato città                                              </option>
+									<option>MEF (Dipto finanze-RGS) di concerto Sviluppo Economico                                                                       </option>
+									<option>MEF (Dipto tesoro) sentita la Banca d'Italia                                                                                 </option>
+									<option>MEF (Dipto tesoro)di concerto MISE                                                                                           </option>
+									<option>MEF (RGS)  Conf. Stato-Regioni e prov. Autonome (intesa)                                                                     </option>
+									<option>MEF (RGS) di concerto Coesione territoriale, Affari regionali e MISE                                                         </option>
+									<option>MEF (RGS) Istruzione, università e ricerca / Infrastrutture e Trasporti                                                      </option>
+									<option>MEF (RGS) sentita l'Agenzia Italia Digitale                                                                                  </option>
+									<option>MEF (RGS) su proposta del''Agenzia per l'Italia digitale                                                                     </option>
+									<option>MEF (RGS, Dipto tesoro) d'intesa Lavoro e Politiche Sociali /MISE                                                            </option>
+									<option>Ragioniere generale di concerto con Direttore Ag. Entrate                                                                    </option>
+									<option>RGS                                                                                                                          </option>
+								</select>
+							</div>
+						</div>
+						<div class="control-group">
+							<label class="control-label" for="titoloOggetto">Parere</label>
+							<div class="controls">
+								<textarea id="titoloOggetto" class="input-xlarge" cols="30" rows="4" >Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</textarea>
+							</div>
+						</div>
+				</div>
+			</div>
+		<!-- Allegati insert -->
+			<div class="" style="width: 50%;  margin-left: 20%; margin-right: 30%;">
+				<div>
+					<h3 class="text-left underline">
+						<span>Allegati</span>
+					</h3>
+					<table class="table table-hover table-bordered" style="width: 100%">
+						<thead>
+							<tr>
+								<th>Id</th>
+								<th>Descrizione</th>
+								<th>Dimensione</th>
+								<th class="center">Elimina</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td class="vcenter">Documento per lorem ipsum...</td>
+								<td>200 kb</td>
+								<td class="vcenter"><i class="icon-trash icon-large gray"></i>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			<div class="control-group">
+				<label class="control-label" for="allegato">Nome file</label>
+				<div class="controls">
+					<input type="text" id="allegato" class="input-xlarge" />
+					<button type="button" id="insertEnte" class="btn">Sfoglia</button>
+				</div>
+			</div>
+			<div class="control-group">
+				<label class="control-label" for="descrizione">Descrizione</label>
+				<div class="controls">
+					<textarea id="descrizione" class="input-xlarge" rows="3" ></textarea>
+				</div>
+			</div>
+			<div class="control-group text-center">
+					<button type="button" id="insertEnte" class="btn">
+						Aggiungi <i class="icon-plus"></i>
+					</button>
+			</div>
+			</div>
+			<!-- allegati end -->
+			<div class="row">
+				<div class="span12">
+					<h3 class="text-left underline"><span>Assegnatari</span></h3>
+				</div>
+			</div>
+			<div class="row">
+				<div class="span12">
+					<table class="table table-hover table-bordered">
+						<thead>
+							<tr>
+								<th>
+									Organo
+								</th>
+								<th>
+									Presa in carico
+								</th>
+								<th class="allegati">
+									Allegati
+								</th>
+								<th>
+									Note
+								</th>
+								<th>
+									Cronologia Modifiche
+								</th>
+								<th class="center">
+									Elimina
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="vcenter">
+									Ag. Territorio 
+								</td>
+								<td class="vcenter center">
+									<i class="icon-check icon-large"></i>
+								</td>
+								<td>
+									Documento 1 (PDF - 1Mb)<br>
+									Documento 2 (Excel - 350Kb)<br>
+									Documento 3 (Testo - 1Kb) <br>
+								</td>
+								<td>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+								</td>
+								<td class="vcenter center">
+									<a href="#myModal" role="button" data-toggle="modal"><i class="icon-time icon-large"></i></a>
+								</td>	
+								<td class="vcenter center">
+									<i class="icon-trash icon-large gray"></i>
+								</td>
+							</tr>
+ 							<tr>
+								<td>
+									MEF (Dipto finanze)  
+								</td>
+								<td class="vcenter center">
+									<a href="#" id="popoverRifiuto"><i class="icon-remove-sign icon-large"></i>&nbsp;Motivazione</a>
+								</td>
+								<td>
+								</td>
+								<td>
+									
+								</td>
+								<td class="vcenter center">
+									<a href="#myModal" role="button" data-toggle="modal"><i class="icon-time icon-large"></i></a>
+								</td>								
+								<td class="vcenter center">
+									<i class="icon-trash icon-large"></i>
+								</td>
+							</tr>
+							<tr id="assegnatarioDipTesoro">
+								<td class="vcenter">
+									Dip.to Tesoro
+								</td>
+								<td class="vcenter">
+									
+								</td>
+								<td class="vcenter">
+									
+								</td>
+								<td>
+									
+								</td>
+								<td class="vcenter center">
+									<a href="#myModal" role="button" data-toggle="modal"><i class="icon-time icon-large"></i></a>
+								</td>									
+								<td class="vcenter center">
+									<a href="#" id="deleteEnte"><i class="icon-trash icon-large gray"></i></a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="control-group">
+					<label class="control-label" for="enteAssegnatario">Nuovo assegnatario</label>
+					<div class="controls">
+						<select id="enteAssegnatario" class="span3">
+									<option>Sceglierne uno...</option>
+									<option>(RGS) su proposta del MAE di concerto con Min.affari europei                                                                 </option>  
+									<option>Agenzia Entrate e Territorio                                                                                                 </option>
+									<option>Ag. Dogane e Monopoli                                                                                                        </option>
+									<option>Ag. Entrate                                                                                                                  </option>
+									<option>Ag. Territorio                                                                                                               </option>
+									<option>Agenzia Dogane e Monopoli                                                                                                    </option>
+									<option>Agenzia Entrate                                                                                                              </option>
+									<option>Agenzia Entrate/Guardia di finanza                                                                                           </option>
+									<option>Dipartimento finanze (DLTFF)                                                                                                 </option>
+									<option>Dip.to Tesoro                                                                                                                </option>
+									<option>Dogane e monopoli                                                                                                            </option>
+									<option>dPCM su proposta del MEF (Dipto finanze DLTFF) di concerto con il Min.Interno                                                </option>
+									<option>dPCM su proposta MEF (Dipto finanze - DLTFF, RGS)  previo parere delle Commissioni parlamentari competenti per materia       </option>
+									<option>dPCM su proposta MEF (Dipto finanze) di concerto Ministro della giustizia sentito il Consiglio Nazionale Notariato           </option>
+									<option>dPCM su proposta MEF (RGS e Dipto tesoro)   di concerto Min.Coesione territoriale                                            </option>
+									<option>Interno e Giustizia                                                                                                          </option>
+									<option>MEF (Dipto finanze Ag.Dogane, RGS) di concerto MISE                                                                          </option>
+									<option>MEF (Dipto finanze) di concerto Coesione territoriale, Affari regionali e MISE                                               </option>
+									<option>MEF (Dipto finanze) d'intesa con Agenzia Entrate e ISTAT                                                                     </option>
+									<option>MEF (Dipto finanze) Interno sentita la Conf. Stato Città                                                                     </option>
+									<option>MEF (Dipto finanze) sentita l’Agenzia per l’Italia digitale                                                                  </option>
+									<option>MEF (Dipto finanze, Ag.entrate e Equitalia) di concerto MISE                                                                 </option>
+									<option>MEF (Dipto finanze, Ag.entrate) di concerto MISE e MIBACT                                                                    </option>
+									<option>MEF (Dipto finanze, RGS) di concerto Min.Interno    sentita la Conf. Sato città                                              </option>
+									<option>MEF (Dipto finanze-RGS) di concerto Sviluppo Economico                                                                       </option>
+									<option>MEF (Dipto tesoro) sentita la Banca d'Italia                                                                                 </option>
+									<option>MEF (Dipto tesoro)di concerto MISE                                                                                           </option>
+									<option>MEF (RGS)  Conf. Stato-Regioni e prov. Autonome (intesa)                                                                     </option>
+									<option>MEF (RGS) di concerto Coesione territoriale, Affari regionali e MISE                                                         </option>
+									<option>MEF (RGS) Istruzione, università e ricerca / Infrastrutture e Trasporti                                                      </option>
+									<option>MEF (RGS) sentita l'Agenzia Italia Digitale                                                                                  </option>
+									<option>MEF (RGS) su proposta del''Agenzia per l'Italia digitale                                                                     </option>
+									<option>MEF (RGS, Dipto tesoro) d'intesa Lavoro e Politiche Sociali /MISE                                                            </option>
+									<option>Ragioniere generale di concerto con Direttore Ag. Entrate                                                                    </option>
+									<option>RGS                                                                                                                          </option>
+						</select>
+						<button type="button" id="insertEnte" class="btn">Aggiungi &nbsp;<i class="icon-plus"></i></button>
+					</div>
+				</div>
+			</div>
+		</form>
+		<div class="row">
+			<div class="span12">
+				<div class="form-horizontal">
+					<div class="control-group">
+						<div class="form-actions pull-right">
+							<button type="submit" class="btn btn-primary" id="salvaModifica">Salva &nbsp;<i class="icon-save"></i></button>
+							<button type="button" class="btn" id="annulla">Annulla &nbsp;<i class="icon-undo"></i></button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+<!--  finestra modale -->
+ 
+	<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog"
+		aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal"
+				aria-hidden="true">×</button>
+			<h3 id="myModalLabel">Cronologia modifiche</h3>
+		</div>
+		<div class="modal-body">
+			<table class="table table-hover table-bordered">
+				<thead>
+					<tr>
+						<th>Data</th>
+						<th>Operazione</th>
+						<th>Organo</th>
+						<th>Utente</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>09-08-2014 09:37</td>
+						<td>Inserimento nota</td>
+						<td>Dogane e monopoli</td>
+						<td>Marco Iezzi</td>
+					</tr>
+					<tr>
+						<td>10-08-2014 14:30</td>
+						<td>Modifica nota</td>
+						<td>Dogane e monopoli</td>
+						<td>Francesco Carlucci</td>
+					</tr>
+					<tr>
+						<td>10-08-2014 15:56</td>
+						<td>Inserimento allegato</td>
+						<td>Dogane e monopoli</td>
+						<td>Daniele Fiorio</td>
+					</tr>
+					<tr>
+						<td>13-08-2014 10:23</td>
+						<td>Inserimento allegato</td>
+						<td>Dogane e monopoli</td>
+						<td>Daniele Fiorio</td>
+					</tr>
+					<tr>
+						<td>20-08-2014 17:10</td>
+						<td>Cancellazione allegato</td>
+						<td>Dogane e monopoli</td>
+						<td>Alessandro Bartolucci</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="modal-footer">
+			<button class="btn" data-dismiss="modal" aria-hidden="true">Chiudi</button>
+		</div>
+	</div>
+<!-- fine finestra modale -->
+</body>
+</html>
