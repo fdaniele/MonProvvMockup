@@ -1,5 +1,5 @@
 $(document).ready(function() {
- 
+
     $('.multiselect').multiselect({
             nonSelectedText: 'Tutti',
             numberDisplayed: 20
@@ -30,11 +30,13 @@ $(document).ready(function() {
   	  btnRicAvUp.show();
     });
     
-    $("#annulla, #salva").click(function() {
-    	window.location.href = "index.html";
+    $("#salva").click(function() {
+    	if($(this).is(":submit")){
+    		window.location.href = "index.html";
+    	}
     });
     
-    $("#indietro").click(function() {
+    $("#annulla, #indietro").click(function() {
     	window.location.href = "index.html";
     });
     
@@ -51,6 +53,56 @@ $(document).ready(function() {
    
     $("#avantiStep2").click(function() {
     	window.location.href = "inserimento_step2.html";
+    });
+    
+    $("#avantiStep3").click(function() {
+    	window.location.href = "inserimento_step3.html";
+    });
+    
+    $("#indietroStep1").click(function() {
+    	window.location.href = "inserimento_step1.html";
+    });
+    
+    $("#indietroStep2").click(function() {
+    	window.location.href = "inserimento_step2.html";
+    });
+    
+    
+    $("#modifica").click(function() {
+    	window.location.href = "modifica.html";
+    });
+    
+    $('#risultatiRicerca .table > tbody > tr:eq(0)').click(function() {
+    	window.location.href = "dettaglio.html";
+    });
+    
+    $('#risultatiRicerca .table > tbody > tr:eq(1)').click(function() {
+    	window.location.href = "dettaglio_assegnatario.html";
+    });
+    
+    $('#risultatiRicerca .table > tbody > tr:eq(2)').click(function() {
+    	window.location.href = "dettaglio_non_assegnatario.html";
+    });
+    
+    
+    $("#salvaModifica").click(function() {
+    	window.location.href = "dettaglio.html";
+    });
+    
+    $("#vaiaricerca").click(function() {
+    	window.location.href = "index.html";
+    });
+    
+    $("#inserisciNote").click(function() {
+    	window.location.href = "inserimentoNoteAllegati.html";
+    });
+    
+    $("#salvaNote").click(function() {
+    	window.location.href = "dettaglio_assegnatario.html";
+    });
+    
+    $("#annullaNote").click(function() {
+    	window.location.href = "dettaglio_assegnatario.html";
     });
     
     $("#avantiStep3").click(function() {
@@ -124,7 +176,6 @@ $(document).ready(function() {
     });
     
     $("#deleteEnte").click(function(e) {
-    	//assegnatarioDipTesoro.show();
     	assegnatarioDipTesoro.fadeOut( 1000 );
     	$("#noRecord").show();
     	e.preventDefault();
@@ -189,6 +240,31 @@ $(document).ready(function() {
                'max-height':'100%'     
         });
     });
+    
+    $('#statoDiAttuazioneDettaglio').on('change', function () {
+    	var val = $(this).val();
+    	var valoreAction = "Chiusura lavori";
+    	if(val==valoreAction){
+    		$("#salva").text("Salva e invia notifica");
+    		$("#salva").attr('data-toggle', 'modal');
+    		$("#salva").attr('data-target', '#modalSalvaInviaNotifica');
+    		$("#salva").attr('type', 'button');
+    		
+    	} else {
+    		$("#salva").html("Salva &nbsp;<i class=\"icon-save\"></i>");
+    		$("#salva").attr('type', 'submit');
+    	}
+    });
+    
+    $("#proponenteDiv").hide();
+    $('#statoDiAttuazione').on('change', function () {
+    	var val = $(this).val();
+    	var option1 = "Concertante MEF";
+    	var option2 = "Concerto preventivo";
+    	if((val==option1) || (val==option2)){
+    		$("#proponenteDiv").show();
+    	} else {
+    		$("#proponenteDiv").hide();
+    	}
+    });  
 });
-
-

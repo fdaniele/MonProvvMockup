@@ -99,6 +99,7 @@
 									<option>Sceglierne uno...</option>
 									<option selected>Proponente MEF</option>
 									<option>Concertante MEF</option>
+									<option>Concerto preventivo</option>
 								</select>
 							</div>
 						</div>
@@ -207,7 +208,7 @@
 								</select>
 							</div>
 						</div>
-						<div class="control-group">
+						<div class="control-group" id="proponenteDiv">
 							<label class="control-label" for="proponente">Proponente
 								(DD)</label>
 							<div class="controls">
@@ -251,8 +252,71 @@
 								</select>
 							</div>
 						</div>
+						<div class="control-group">
+							<label class="control-label" for="titoloOggetto">Parere</label>
+							<div class="controls">
+								<textarea id="titoloOggetto" class="input-xlarge" cols="30" rows="4" >Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</textarea>
+							</div>
+						</div>
 				</div>
 			</div>
+			<!-- Allegati insert -->
+			<div class="row">
+				<div class="span12">
+					<h3 class="text-left underline">
+						<span>Allegati</span>
+					</h3>
+				</div>
+			</div>
+			<div class="row">
+				<div class="span12">	
+					<table class="table table-hover table-bordered" style="width: 100%">
+						<thead>
+							<tr>
+								<th>Id</th>
+								<th>Descrizione</th>
+								<th>Dimensione</th>
+								<th class="center">Elimina</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td class="vcenter">Documento 1</td>
+								<td>200 kb</td>
+								<td class="center vcenter">
+									<i class="icon-trash icon-large gray"></i>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div class="row">
+				<div class="span12">	
+					<div class="control-group">
+						<label class="control-label" for="allegato">Nome file</label>
+						<div class="controls">
+							<input type="text" id="allegato" class="input-xlarge" />
+							<button type="button" id="insertEnte" class="btn">Sfoglia</button>
+						</div>
+					</div>
+					<div class="control-group">
+						<label class="control-label" for="descrizione">Descrizione</label>
+						<div class="controls">
+							<textarea id="descrizione" class="input-xlarge" rows="3" ></textarea>
+						</div>
+					</div>
+					<div class="control-group">
+						<div class="controls">
+							<button type="button" id="insertEnte" class="btn">
+								Aggiungi <i class="icon-plus"></i>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- allegati end -->
 			<div class="row">
 				<div class="span12">
 					<h3 class="text-left underline"><span>Assegnatari</span></h3>

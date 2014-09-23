@@ -40,6 +40,10 @@ th.allegati {
 	width: 150px;
 }
 
+th.medium {
+	width: 200px;
+}
+
 /** CUSTOM DETTAGLIO **/
 .dettaglio .control-group .control-label {
 	padding-top:inherit;

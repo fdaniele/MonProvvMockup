@@ -49,6 +49,7 @@
 			<div class="span12">
 				<div class="navbar navbar-inner navbar-custom">
 					<ul class="nav navbar-nav">
+						<!-- 
 						<li class="dropdown">
 						    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
 						      Provvedimenti
@@ -58,6 +59,10 @@
 				      			<li><a href="#" id="vaiaricerca">Ricerca</a></li>
 				    		</ul>
 				  		</li>
+				  		 -->
+				  		 <li>
+				  		 	<a href="#" id="vaiaricerca">Home <i class="icon-home"></i></a>
+				  		 </li>
 					</ul>
 				</div>
 			</div>
@@ -66,7 +71,7 @@
 	<div class="container breadcumb">
 		<div class="row">
 			<div class="span12">
-				<span class="titoloBreadcumb">Ti trovi in: </span><span>Provvedimenti &gt; Ricerca &gt; Dettaglio</span>
+				<span class="titoloBreadcumb">Ti trovi in: </span><span>Home &gt; Ricerca &gt; Dettaglio</span>
 			</div>
 		</div>
 	</div>
@@ -149,8 +154,43 @@
 								<span>Dip.to Tesoro</span>
 							</div>
 						</div>
+						<div class="control-group">
+							<label class="control-label" for="proponente">Parere</label>
+							<div class="controls">
+								<span>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam</span>
+							</div>
+						</div>
 				</div>
 			</div>
+			<!-- Allegati insert -->
+			<div class="row">
+				<div class="span12">
+					<h3 class="text-left underline">
+						<span>Allegati</span>
+					</h3>
+				</div>
+			</div>
+			<div class="row">
+				<div class="span12">	
+					<table class="table table-hover table-bordered" style="width: 100%">
+						<thead>
+							<tr>
+								<th>Id</th>
+								<th>Descrizione</th>
+								<th>Dimensione</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td class="vcenter">Documento 1</td>
+								<td>200 kb</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<!-- allegati end -->
 			<div class="row">
 				<div class="span12">
 					<h3 class="text-left underline"><span>Assegnatari</span></h3>
@@ -161,13 +201,13 @@
 					<table class="table table-hover table-bordered">
 						<thead>
 							<tr>
-								<th>
+								<th class="medium">
 									Organo
 								</th>
 								<th>
 									Presa in carico
 								</th>
-								<th class="allegati">
+								<th class="medium">
 									Allegati
 								</th>
 								<th>
@@ -274,31 +314,31 @@
 					<tr>
 						<td>09-08-2014 09:37</td>
 						<td>Inserimento nota</td>
-						<td>Dogane e monopoli</td>
+						<td>Agenzia Dogane e monopoli</td>
 						<td>Marco Iezzi</td>
 					</tr>
 					<tr>
 						<td>10-08-2014 14:30</td>
 						<td>Modifica nota</td>
-						<td>Dogane e monopoli</td>
+						<td>Agenzia Dogane e monopoli</td>
 						<td>Francesco Carlucci</td>
 					</tr>
 					<tr>
 						<td>10-08-2014 15:56</td>
 						<td>Inserimento allegato</td>
-						<td>Dogane e monopoli</td>
+						<td>Agenzia Dogane e monopoli</td>
 						<td>Daniele Fiorio</td>
 					</tr>
 					<tr>
 						<td>13-08-2014 10:23</td>
 						<td>Inserimento allegato</td>
-						<td>Dogane e monopoli</td>
+						<td>Agenzia Dogane e monopoli</td>
 						<td>Daniele Fiorio</td>
 					</tr>
 					<tr>
 						<td>20-08-2014 17:10</td>
 						<td>Cancellazione allegato</td>
-						<td>Dogane e monopoli</td>
+						<td>Agenzia Dogane e monopoli</td>
 						<td>Alessandro Bartolucci</td>
 					</tr>
 				</tbody>
@@ -333,6 +373,5 @@
 			<button class="btn" data-dismiss="modal" aria-hidden="true" id="rifiutoAssegnazione">Rifiuta <i class="icon-remove-sign"></i></button>
 		</div>
 	</div>
-
 </body>
 </html>

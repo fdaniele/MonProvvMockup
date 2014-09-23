@@ -130,10 +130,10 @@
 							</div>
 						</div>
 						<div class="control-group">
-							<label class="control-label" for="statoDiAttuazione">Stato
+							<label class="control-label" for="statoDiAttuazioneDettaglio">Stato
 								di attuazione</label>
 							<div class="controls">
-								<select id="statoDiAttuazione" class="input-xlarge">
+								<select id="statoDiAttuazioneDettaglio" class="input-xlarge">
 									<option>Inserito</option>
 									<option>Sospeso</option>
 									<option selected>Fine lavorazione</option>
@@ -157,8 +157,43 @@
 								<span>Agenzia Dogane e Monopoli</span>
 							</div>
 						</div>
+						<div class="control-group">
+							<label class="control-label" for="proponente">Parere</label>
+							<div class="controls">
+								<span>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</span>
+							</div>
+						</div>
 				</div>
 			</div>
+			<!-- Allegati insert -->
+			<div class="row">
+				<div class="span12">
+					<h3 class="text-left underline">
+						<span>Allegati</span>
+					</h3>
+				</div>
+			</div>
+			<div class="row">
+				<div class="span12">	
+					<table class="table table-hover table-bordered" style="width: 100%">
+						<thead>
+							<tr>
+								<th>Id</th>
+								<th>Descrizione</th>
+								<th>Dimensione</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td class="vcenter">Documento 1</td>
+								<td>200 kb</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<!-- allegati end -->
 			<div class="row">
 				<div class="span12">
 					<h3 class="text-left underline"><span>Assegnatari</span></h3>
@@ -169,13 +204,13 @@
 					<table class="table table-hover table-bordered">
 						<thead>
 							<tr>
-								<th>
+								<th class="medium">
 									Organo
 								</th>
 								<th>
 									Presa in carico
 								</th>
-								<th class="allegati">
+								<th class="medium">
 									Allegati
 								</th>
 								<th>
@@ -186,7 +221,7 @@
 								</th>
 								<th class="center">
 									Elimina
-								</th>
+								</th>								
 								<th class="center">
 									Sollecito
 								</th>
@@ -215,7 +250,7 @@
 									<i class="icon-trash icon-large gray"></i>
 								</td>
 								<td class="vcenter center">
-									<i class="icon-envelope-alt icon-large" title="Invio sollecito"></i>
+									<a href="#modalSollecito" role="button" data-toggle="modal"><i class="icon-envelope-alt icon-large" title="Invio sollecito"></i></a>
 								</td>
 							</tr>
  							<tr>
@@ -232,12 +267,13 @@
 								</td>
 								<td class="vcenter center">
 									<a href="#modalCronologia" data-toggle="modal"><i class="icon-time icon-large" title="Apri cronologia"></i></a>
-								</td>								
+								</td>	
 								<td class="vcenter center">
 									<i class="icon-trash icon-large" title="Elimina assegnazione"></i>
 								</td>
-								<td>
-								</td>
+								<td class="vcenter center">
+									<a href="#modalSollecito" role="button" data-toggle="modal"><i class="icon-envelope-alt icon-large" title="Invio sollecito"></i></a>
+								</td>															
 							</tr>
 							<tr id="assegnatarioDipTesoro">
 								<td class="vcenter">
@@ -253,7 +289,6 @@
 									
 								</td>
 								<td class="vcenter center">
-									
 								</td>									
 								<td class="vcenter center">
 									<a href="#" id="deleteEnte"><i class="icon-trash icon-large gray"></i></a>
@@ -322,7 +357,7 @@
 					</div>
 				</div>
 			</div>
-		</div>		
+		</div>
 	</div>
 	
 	
@@ -383,6 +418,65 @@
 			<button class="btn" data-dismiss="modal" aria-hidden="true">Chiudi</button>
 		</div>
 	</div>
+	
+	<div id="modalSalvaInviaNotifica" class="modal hide fade" tabindex="-1" role="dialog"
+		aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal"
+				aria-hidden="true">×</button>
+			<h3 id="myModalLabel">Invia notifica</h3>
+		</div>
+		<div class="modal-body">
+			<div class="form-horizontal">
+				<div class="control-group">
+					<label class="control-label" for="email">Email</label>
+					<div class="controls">
+						<input type="text" class="input-xlarge" id="email"></input>
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label" for="oggetto">Oggetto</label>
+					<div class="controls">
+						<input type="text" class="input-xlarge" id="oggetto"></input>
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label" for="art">Testo</label>
+					<div class="controls">
+						<textarea class="input-xlarge" rows="10"></textarea>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<div class="modal-footer">
+			<button class="btn" data-dismiss="modal" aria-hidden="true" id="inviaNotifica">Invia notifica <i class="icon-send"></i></button>
+		</div>
+	</div>
 <!-- fine finestra modale -->
+
+<!--  modal invio sollecito  -->
+	<div id="modalSollecito" class="modal hide fade" tabindex="-1" role="dialog"
+		aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal"
+				aria-hidden="true">×</button>
+			<h3 id="myModalLabel">Invio sollecito</h3>
+		</div>
+		<div class="modal-body">
+			<div class="form-horizontal">
+				<div class="control-group">
+					<label class="control-label" for="art">Testo</label>
+					<div class="controls">
+						<textarea class="input-xlarge" rows="10"></textarea>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<div class="modal-footer">
+			<button class="btn" data-dismiss="modal" aria-hidden="true" id="richiediAssegnazione">Invia &nbsp;<i class="icon-location-arrow"></i></button>
+		</div>
+	</div>
 </body>
 </html>
