@@ -301,3 +301,21 @@ th {
 	width: 700px;
 	margin-left: -420px;
 }
+
+.color-capofila {
+	background: #C0C0C0;
+}
+
+i.color-capofila {
+	color: #C0C0C0;
+	background: #FFF;
+}
+
+.color-assegnatario {
+	background: #7FFF8E;
+}
+
+i.color-assegnatario {
+	color: #7FFF8E;
+	background: #FFF;
+}
