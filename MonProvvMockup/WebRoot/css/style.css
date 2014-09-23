@@ -1,11 +1,15 @@
 
 /** CUSTOM RICERCA **/
-.ricerca .form-actions{
+#campiRicerca .form-actions{
 	background-color:inherit;
 }
 
-.ricerca .form-horizontal .form-actions {
+#campiRicerca .form-horizontal .form-actions {
 	padding-left: 280px;
+}
+
+#campiRicerca .form-horizontal .form-actions {
+	border-top: inherit;
 }
 
 /** CUSTOM INSERIMENTO **/
@@ -121,9 +125,7 @@ body {
 	background-color:inherit;
 }
 
-.ricerca .form-horizontal .form-actions {
-	border-top: inherit;
-}
+
 .gray {
 	color: gray;
 }
@@ -282,3 +284,11 @@ th {
  #insertNoteAllegatiModal .modal-body {
     max-height: 625px;
 } 
+
+#btnRicercaAvanzata:hover {
+	cursor: pointer;
+}
+
+#btnRicercaAvanzata:hover i {
+	text-decoration: none;
+}

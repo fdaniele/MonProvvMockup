@@ -49,6 +49,7 @@
 			<div class="span12">
 				<div class="navbar navbar-inner navbar-custom">
 					<ul class="nav navbar-nav">
+						<!-- 
 						<li class="dropdown">
 						    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
 						      Provvedimenti
@@ -58,6 +59,10 @@
 				      			<li><a href="#" id="vaiaricerca">Ricerca</a></li>
 				    		</ul>
 				  		</li>
+				  		 -->
+				  		 <li>
+				  		 	<a href="#" id="vaiaricerca">Home <i class="icon-home"></i></a>
+				  		 </li>
 					</ul>
 				</div>
 			</div>
@@ -66,11 +71,11 @@
 	<div class="container breadcumb">
 		<div class="row">
 			<div class="span12">
-				<span class="titoloBreadcumb">Ti trovi in: </span><span>Provvedimenti &gt; Ricerca</span>
+				<span class="titoloBreadcumb">Ti trovi in: </span><span>Home &gt; Ricerca</span>
 			</div>
 		</div>
 	</div>
-	<div class="container ricerca">
+	<div class="container collapse" id="campiRicerca">
 		<div class="row">
 			<div class="span12">
 				<h3 class="underline"><span>Ricerca provvedimento</span></h3>
@@ -108,8 +113,8 @@
 					<div class="control-group">
 						<div class="controls">
 							<h5><a data-toggle="collapse" data-target="#ricercaAvanzata" id="btnRicercaAvanzata">
-	                	      Ricerca avanzata </a><i class="icon-caret-down icon-large" id="btnRicAvDown"></i> <i class="icon-caret-up icon-large" id="btnRicAvUp"></i>
-	                    	</h5>
+	                	      Ricerca avanzata <i class="icon-caret-down icon-large" id="btnRicAvDown"></i> <i class="icon-caret-up icon-large" id="btnRicAvUp"></i>
+	                    	</a></h5>
 						</div>
 					</div>
 					
@@ -248,7 +253,6 @@
 						<div class="form-actions pull-right">
 							<button type="submit" class="btn " id="ricerca">Ricerca &nbsp;<i class="icon-search"></i></button>
 							<button type="button" class="btn " id="annulla">Pulisci &nbsp;<i class="icon-eraser"></i></button>
-							<button type="submit" class="btn btn-primary " id="nuovo">Nuovo provvedimento &nbsp;<i class="icon-plus"></i></button>
 						</div>
 					</div>
 				</div>
@@ -258,7 +262,11 @@
 	<div class="container" id="risultatiRicerca">
 		<div class="row">
 			<div class="span12">
-				<h3 class="text-left underline"><span>Elenco provvedimenti</span></h3>
+				<h3 class="text-left underline">
+					<span>Elenco provvedimenti</span>
+					<button type="submit" class="btn btn-primary pull-right" id="nuovo">Nuovo provvedimento &nbsp;<i class="icon-plus"></i></button>
+					<button class="btn pull-right" id="toggleRicerca" data-toggle="collapse" data-target="#campiRicerca" style="margin-right: 10px;">Toggle ricerca &nbsp;<i class="icon-search"></i></button>
+				</h3>
 			</div>
 		</div>
 		<div class="row">
