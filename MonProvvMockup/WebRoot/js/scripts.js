@@ -139,9 +139,6 @@ $(document).ready(function() {
     	content = $(this).html();
     });
 
-    $('html').click(function(e) {
-        $('#popoverRifiuto').popover('hide');
-    });
     $("#popoverRifiuto").click( function(e) {  
     	$(this).popover({
 	    	placement : 'top', // top, bottom, left or right
