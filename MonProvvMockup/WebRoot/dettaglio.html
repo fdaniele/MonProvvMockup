@@ -187,6 +187,9 @@
 								<th class="center">
 									Elimina
 								</th>
+								<th class="center">
+									Sollecito
+								</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -206,10 +209,13 @@
 									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 								</td>
 								<td class="vcenter center">
-									<a href="#myModal" role="button" data-toggle="modal"><i class="icon-time icon-large"></i></a>
+									<a href="#modalCronologia" role="button" data-toggle="modal"><i class="icon-time icon-large"></i></a>
 								</td>	
 								<td class="vcenter center">
 									<i class="icon-trash icon-large gray"></i>
+								</td>
+								<td class="vcenter center">
+									<i class="icon-envelope-alt icon-large" title="Invio sollecito"></i>
 								</td>
 							</tr>
  							<tr>
@@ -217,7 +223,7 @@
 									MEF (Dipto finanze)  
 								</td>
 								<td class="vcenter center">
-									<a href="#" id="popoverRifiuto"><i class="icon-remove-sign icon-large"></i>&nbsp;Motivazione rifiuto</a>
+									<a href="#" id="popoverRifiuto"><i class="icon-remove-sign icon-large" title="Assegnazione rifiutata"></i>&nbsp;Motivazione rifiuto</a>
 								</td>
 								<td>
 								</td>
@@ -225,10 +231,12 @@
 									
 								</td>
 								<td class="vcenter center">
-									<a href="#myModal" role="button" data-toggle="modal"><i class="icon-time icon-large"></i></a>
+									<a href="#modalCronologia" data-toggle="modal"><i class="icon-time icon-large" title="Apri cronologia"></i></a>
 								</td>								
 								<td class="vcenter center">
-									<i class="icon-trash icon-large"></i>
+									<i class="icon-trash icon-large" title="Elimina assegnazione"></i>
+								</td>
+								<td>
 								</td>
 							</tr>
 							<tr id="assegnatarioDipTesoro">
@@ -245,10 +253,12 @@
 									
 								</td>
 								<td class="vcenter center">
-									<a href="#myModal" role="button" data-toggle="modal"><i class="icon-time icon-large"></i></a>
+									
 								</td>									
 								<td class="vcenter center">
 									<a href="#" id="deleteEnte"><i class="icon-trash icon-large gray"></i></a>
+								</td>
+								<td>
 								</td>
 							</tr>
 						</tbody>
@@ -318,7 +328,7 @@
 	
 <!--  finestra modale -->
  
-	<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog"
+	<div id="modalCronologia" class="modal hide fade" tabindex="-1" role="dialog"
 		aria-labelledby="myModalLabel" aria-hidden="true">
 		<div class="modal-header">
 			<button type="button" class="close" data-dismiss="modal"
@@ -339,31 +349,31 @@
 					<tr>
 						<td>09-08-2014 09:37</td>
 						<td>Inserimento nota</td>
-						<td>Dogane e monopoli</td>
+						<td>Agenzia Dogane e monopoli</td>
 						<td>Marco Iezzi</td>
 					</tr>
 					<tr>
 						<td>10-08-2014 14:30</td>
 						<td>Modifica nota</td>
-						<td>Dogane e monopoli</td>
+						<td>Agenzia Dogane e monopoli</td>
 						<td>Francesco Carlucci</td>
 					</tr>
 					<tr>
 						<td>10-08-2014 15:56</td>
 						<td>Inserimento allegato</td>
-						<td>Dogane e monopoli</td>
+						<td>Agenzia Dogane e monopoli</td>
 						<td>Daniele Fiorio</td>
 					</tr>
 					<tr>
 						<td>13-08-2014 10:23</td>
 						<td>Inserimento allegato</td>
-						<td>Dogane e monopoli</td>
+						<td>Agenzia Dogane e monopoli</td>
 						<td>Daniele Fiorio</td>
 					</tr>
 					<tr>
 						<td>20-08-2014 17:10</td>
 						<td>Cancellazione allegato</td>
-						<td>Dogane e monopoli</td>
+						<td>Agenzia Dogane e monopoli</td>
 						<td>Alessandro Bartolucci</td>
 					</tr>
 				</tbody>

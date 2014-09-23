@@ -292,3 +292,8 @@ th {
 #btnRicercaAvanzata:hover i {
 	text-decoration: none;
 }
+
+#modalCronologia.modal {
+	width: 700px;
+	margin-left: -420px;
+}
