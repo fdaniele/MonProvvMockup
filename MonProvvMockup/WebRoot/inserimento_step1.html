@@ -39,10 +39,13 @@
 	<div class="container header">
 		<div class="row">
 			<div class="span7">
-				<h1 class="titolo">Monitoraggio Provvedimenti</h1>
+				<h1 class="titolo"><img alt="Monitoraggio Provvedimenti" src="img/mon_prov_header.png"/>​</h1>
 			</div>
 			<div class="span5">
 				<span class="utente">Utente: Mario Rossi (Ruolo Inseritore) - Agenzia Dogane e Monopoli - <a id="popoverNotifiche" href="#">Hai 2 messaggi non letti</a> </span> 
+				<div class="pull-right img_logomef">
+                	<img class="pull-right" src="img/logo_mef.png" alt="Logo - MEF (ministero dell'Economia e delle Finanze)" />
+            	</div>
 			</div>
 		</div>
 		<div class="row">
@@ -168,41 +171,17 @@
 							<div class="controls">
 								<select id="proponente" class="input-xlarge">
 									<option>Sceglierne uno...</option>
-									<option>(RGS) su proposta del MAE di concerto con Min.affari europei                                                                 </option>  
-									<option>Agenzia Entrate e Territorio                                                                                                 </option>
-									<option>Ag. Dogane e Monopoli                                                                                                        </option>
-									<option>Ag. Entrate                                                                                                                  </option>
-									<option>Ag. Territorio                                                                                                               </option>
-									<option selected>Agenzia Dogane e Monopoli                                                                                                    </option>
-									<option>Agenzia Entrate                                                                                                              </option>
-									<option>Agenzia Entrate/Guardia di finanza                                                                                           </option>
-									<option>Dipartimento finanze (DLTFF)                                                                                                 </option>
-									<option>Dip.to Tesoro                                                                                                                </option>
-									<option>Dogane e monopoli                                                                                                            </option>
-									<option>dPCM su proposta del MEF (Dipto finanze DLTFF) di concerto con il Min.Interno                                                </option>
-									<option>dPCM su proposta MEF (Dipto finanze - DLTFF, RGS)  previo parere delle Commissioni parlamentari competenti per materia       </option>
-									<option>dPCM su proposta MEF (Dipto finanze) di concerto Ministro della giustizia sentito il Consiglio Nazionale Notariato           </option>
-									<option>dPCM su proposta MEF (RGS e Dipto tesoro)   di concerto Min.Coesione territoriale                                            </option>
-									<option>Interno e Giustizia                                                                                                          </option>
-									<option>MEF (Dipto finanze Ag.Dogane, RGS) di concerto MISE                                                                          </option>
-									<option>MEF (Dipto finanze) di concerto Coesione territoriale, Affari regionali e MISE                                               </option>
-									<option>MEF (Dipto finanze) d'intesa con Agenzia Entrate e ISTAT                                                                     </option>
-									<option>MEF (Dipto finanze) Interno sentita la Conf. Stato Città                                                                     </option>
-									<option>MEF (Dipto finanze) sentita l’Agenzia per l’Italia digitale                                                                  </option>
-									<option>MEF (Dipto finanze, Ag.entrate e Equitalia) di concerto MISE                                                                 </option>
-									<option>MEF (Dipto finanze, Ag.entrate) di concerto MISE e MIBACT                                                                    </option>
-									<option>MEF (Dipto finanze, RGS) di concerto Min.Interno    sentita la Conf. Sato città                                              </option>
-									<option>MEF (Dipto finanze-RGS) di concerto Sviluppo Economico                                                                       </option>
-									<option>MEF (Dipto tesoro) sentita la Banca d'Italia                                                                                 </option>
-									<option>MEF (Dipto tesoro)di concerto MISE                                                                                           </option>
-									<option>MEF (RGS)  Conf. Stato-Regioni e prov. Autonome (intesa)                                                                     </option>
-									<option>MEF (RGS) di concerto Coesione territoriale, Affari regionali e MISE                                                         </option>
-									<option>MEF (RGS) Istruzione, università e ricerca / Infrastrutture e Trasporti                                                      </option>
-									<option>MEF (RGS) sentita l'Agenzia Italia Digitale                                                                                  </option>
-									<option>MEF (RGS) su proposta del''Agenzia per l'Italia digitale                                                                     </option>
-									<option>MEF (RGS, Dipto tesoro) d'intesa Lavoro e Politiche Sociali /MISE                                                            </option>
-									<option>Ragioniere generale di concerto con Direttore Ag. Entrate                                                                    </option>
-									<option>RGS                                                                                                                          </option>
+									<option>MISE                                       </option>
+									<option>Min. Coesione Territoriale                 </option>
+									<option>Min. Affari regionali                      </option>
+									<option>MIBACT                                     </option>
+									<option>Min. Salute                                </option>
+									<option>Min. con delega alle politiche giovanili   </option>
+									<option>Conferenza Stato Regioni                   </option>
+									<option>Min. Pubblica Istruzione                   </option>
+									<option>Guardia Di Finanza                         </option>
+									<option>Min.affari europei                         </option>
+									<option>Equitalia                                  </option>
 								</select>
 							</div>
 						</div>
@@ -247,7 +226,7 @@
 			<div class="row">
 				<div class="span12">	
 					<div class="control-group">
-						<label class="control-label" for="allegato">Nome file</label>
+						<label class="control-label" for="allegato">File da allegare</label>
 						<div class="controls">
 							<input type="text" id="allegato" class="input-xlarge" />
 							<button type="button" id="insertEnte" class="btn">Sfoglia</button>
@@ -256,7 +235,7 @@
 					<div class="control-group">
 						<label class="control-label" for="descrizione">Descrizione</label>
 						<div class="controls">
-							<textarea id="descrizione" class="input-xlarge" rows="3" ></textarea>
+							<input type="text" id="allegato" class="input-xxlarge" />
 						</div>
 					</div>
 					<div class="control-group">

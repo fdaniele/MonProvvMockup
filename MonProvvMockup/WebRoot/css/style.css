@@ -303,19 +303,28 @@ th {
 }
 
 .color-capofila {
-	background: #59B4FF;
+	background: #EBF8FF;
 }
 
 i.color-capofila {
-	color: #59B4FF;
+	color: #EBF8FF;
 	background: #FFF;
 }
 
 .color-assegnatario {
-	background: #7FFF8E;
+	background: #E4FFE6;
 }
 
 i.color-assegnatario {
-	color: #7FFF8E;
+	color: #E4FFE6;
 	background: #FFF;
+}
+
+.img_logomef {
+	margin: 1em 2em 0px 0px;
+}
+
+a.download {
+	color: inherit;
+	text-decoration: underline !important;
 }
