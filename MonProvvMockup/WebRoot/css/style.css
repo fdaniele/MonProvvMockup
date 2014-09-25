@@ -1,4 +1,3 @@
-
 /** CUSTOM RICERCA **/
 #campiRicerca .form-actions{
 	background-color:inherit;
@@ -64,66 +63,15 @@ body {
 }
 
 .container {
+}
+
+.container {
 	color: #545454;
-	width: 1550px;
 	background-color: #FFFFFF;
-	padding-left: 5px;
-	padding-right: 5px;
-}
+	border-left: 4px solid #FFF;
+	border-right: 4px solid #FFF;
 
-.span12 {
-	width: 1540px;
 }
-
-.span10 {
-	width: 1277px;
-}
-
-.span8 {
-	width: 1016px;
-}
-
-.span7 {
-	width: 884px;
-}
-
-.span6 {
-	width: 753px;
-}
-
-.span5 {
-	width: 622px;
-}
-
-.span4 {
-	width: 492px;
-}
-
-.span2 {
-	width: 229px;
-}
-
-.span1 {
-	width: 98px;
-}
-
-.offset2 {
-	margin-left: 294px;
-}
-
-.offset1 {
-	margin-left: 160px;
-}
-
-/*
-.form-horizontal .control-label {
-	float: left;
-	width: 200px;
-	padding-top: 5px;
-	padding-right: 10px;
-	text-align: right;
-}
-*/
 
 .form-actions {
 	background-color:inherit;
