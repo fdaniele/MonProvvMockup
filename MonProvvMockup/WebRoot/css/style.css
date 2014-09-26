@@ -82,9 +82,6 @@ body {
 	color: gray;
 }
 
-th {
-	white-space: nowrap;
-}
 
 .nowrap {
 	white-space: nowrap;
@@ -129,19 +126,19 @@ th {
 }
 
 .header.container  {
-	height: 180px;
+	height: 170px;
 	background-image: url(../img/bg_banner.png);
 	background-repeat: no-repeat;
 	border-bottom: 1px solid #ccc;
 }
 
-.header.container > .row {
+.header.container > .row:first-child {
 	height: 140px;
 }
 
 .utente {
 	display: block;
-	line-height: 40px;
+	line-height: 30px;
 	background-color: #004383;
 	color: #fff;
 	padding-left: 10px;
@@ -152,8 +149,9 @@ th {
 }
 
 .titolo {
-	line-height: 100px;
-	padding-left: 30px;
+	/*line-height: 100px;
+	padding-left: 30px;*/
+	padding-top: 25px;
 	text-transform: uppercase;
 }
 
@@ -163,6 +161,7 @@ th {
 	padding-left: 0px;
 	padding-right: 0px;
 	background: #193E62;
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#193E62', endColorstr='#193E62',GradientType=0 ); /* IE6-8 */
 }
 
 .navbar.navbar-custom .nav>li>a,  .navbar .nav>li>a:visited, .navbar .dropdown-menu>li>a, .navbar .dropdown-menu>li>a:visited {
@@ -275,4 +274,10 @@ i.color-assegnatario {
 a.download {
 	color: inherit;
 	text-decoration: underline !important;
+}
+
+ul.multiselect-container {
+	max-height: 100px; 
+	overflow-y: auto; 
+	overflow-x: hidden;
 }
